@@ -1,0 +1,76 @@
+
+**** Build of configuration Debug for project sin8_LED ****
+
+"c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../DSK6713_Support.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --include_path="C:/ti/C6xCSL/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="DSK6713_Support.pp"  "../DSK6713_Support.c"
+'Finished building: ../DSK6713_Support.c'
+' '
+'Building file: ../ISRs.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --include_path="C:/ti/C6xCSL/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
+'Finished building: ../ISRs.c'
+' '
+'Building file: ../Sine8_LED.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --include_path="C:/ti/C6xCSL/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="Sine8_LED.pp"  "../Sine8_LED.c"
+"../Sine8_LED.c", line 15: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 16: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 17: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 20: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 22: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 23: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 26: warning #225-D: function declared implicitly
+'Finished building: ../Sine8_LED.c'
+' '
+'Building file: ../StartUp.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --include_path="C:/ti/C6xCSL/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.pp"  "../StartUp.c"
+'Finished building: ../StartUp.c'
+' '
+'Building file: ../Vectors_poll.asm'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --include_path="C:/ti/C6xCSL/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="Vectors_poll.pp"  "../Vectors_poll.asm"
+'Finished building: ../Vectors_poll.asm'
+' '
+'Building file: ../c6713dskinit.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --include_path="C:/ti/C6xCSL/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="c6713dskinit.pp"  "../c6713dskinit.c"
+'Finished building: ../c6713dskinit.c'
+' '
+'Building file: ../vectors.asm'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --include_path="C:/ti/C6xCSL/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.pp"  "../vectors.asm"
+'Finished building: ../vectors.asm'
+' '
+'Building target: sin8_LED.out'
+'Invoking: C6000 Linker'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off -z -m"sin8_LED.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="sin8_LED_linkInfo.xml" --rom_model -o "sin8_LED.out"  "./DSK6713_Support.obj" "./ISRs.obj" "./Sine8_LED.obj" "./StartUp.obj" "./Vectors_poll.obj" "./c6713dskinit.obj" "./vectors.obj" "../lnk6713.cmd" -l"libc.a" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" 
+<Linking>
+warning #16002-D: build attribute vendor section TI missing in "C:\ti\C6xCSL\lib_3x\csl6713.lib<csl_irq.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "C:\ti\C6xCSL\lib_3x\csl6713.lib<csl_mcbsp.obj>": compatibility cannot be determined
+warning #10247-D: creating output section ".vectors" without a SECTIONS specification
+
+
+ undefined                      first referenced  
+>> Compilation failure
+  symbol                            in file       
+ ---------                      ----------------  
+ _DSK6713_AIC23_codecdatahandle ./c6713dskinit.obj
+ _DSK6713_AIC23_openCodec       ./c6713dskinit.obj
+ _DSK6713_AIC23_rset            ./c6713dskinit.obj
+ _DSK6713_AIC23_setFreq         ./c6713dskinit.obj
+ _DSK6713_DIP_get               ./Sine8_LED.obj   
+ _DSK6713_DIP_init              ./Sine8_LED.obj   
+ _DSK6713_LED_init              ./Sine8_LED.obj   
+ _DSK6713_LED_off               ./Sine8_LED.obj   
+ _DSK6713_LED_on                ./Sine8_LED.obj   
+ _DSK6713_init                  ./c6713dskinit.obj
+
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "sin8_LED.out" not built
+gmake: *** [sin8_LED.out] Error 1
+gmake: Target `all' not remade because of errors.
+
+**** Build Finished ****

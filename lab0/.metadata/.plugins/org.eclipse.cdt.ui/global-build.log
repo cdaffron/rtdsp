@@ -12,3 +12,10 @@ gmake: Nothing to be done for `all'.
 gmake: Nothing to be done for `all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project myFirstProject ****
+
+"c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****

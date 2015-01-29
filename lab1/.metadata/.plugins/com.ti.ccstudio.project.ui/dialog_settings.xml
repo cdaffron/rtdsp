@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CCS.ImportLegacyProjectWizard">
+		<item value="true" key="LegacyProjectSelectionPage.COPY_INTO_WORKSPACE"/>
+		<item value="false" key="LegacyProjectSelectionPage.SELECT_DIRECTORY"/>
+		<item value="" key="AdvancedOptionsPage.COMMON_ROOT_VAR_NAME"/>
+		<item value="C:\Users\cdaffron\Downloads\C6713\C6713\sine8_LED\sine8_LED.pjt" key="LegacyProjectSelectionPage.BROWSE_FILE_FILTER"/>
+		<item value="false" key="AdvancedOptionsPage.USE_COMMON_ROOT"/>
+		<item value="" key="AdvancedOptionsPage.COMMON_ROOT_PATH"/>
+	</section>
+	<section name="com.ti.ccstudio.project.ui.internal.properties.DynamicPropertiesPageManager">
+	</section>
+	<section name="com.ti.ccstudio.project.ui.internal.wizards.project.ProjectSettingsPage">
+		<item value="c:\ti\ccsv6\ccs_base\common\targetdb\boards\dsk6713.xml" key="CCS.TARGET"/>
+		<item value="" key="CCS.CONNECTION"/>
+		<section name="1">
+			<item value="" key="CCS.DEVICE_ENDIANNESS"/>
+			<item value="" key="CCS.CODEGEN_TOOL_VERSION"/>
+			<item value="C:\Users\cdaffron\Downloads\K13903_Disk\K13903_Disk\FILES\code\common_code\6713\lnk6713.cmd" key="CCS.LINKER_COMMAND_FILE"/>
+			<item value="null" key="CCS.RUNTIME_SUPPORT_LIB"/>
+			<item value="executable" key="CCS.OUTPUT_TYPE"/>
+			<item value="" key="CCS.OUTPUT_FORMAT"/>
+		</section>
+	</section>
+</section>

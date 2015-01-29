@@ -1,0 +1,40 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\CCStudio_v3.1\myprojects\sine8_LED\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\C6000\cgtools\lib\rts6700.lib"
+Source="..\..\C6000\csl\lib\csl6713.lib"
+Source="..\..\C6000\dsk6713\lib\dsk6713bsl.lib"
+Source="..\Support\c6713dskinit.c"
+Source="..\Support\Vectors_poll.asm"
+Source="Sine8_LED.c"
+Source="..\Support\C6713dsk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -fr"$(Proj_dir)\Debug" -i"c:\CCStudio_v3.1\C6000\dsk6713\include" -d"CHIP_6713" -mv6710 --mem_model:data=far
+
+["Compiler" Settings: "Release"]
+Options=-o3 -fr"$(Proj_dir)\Release" -mv6700
+
+["Linker" Settings: "Debug"]
+Options=-c -m".\Debug\sine8_LED.map" -o".\Debug\sine8_LED.out" -stack0x1000 -w -x -i"c:\CCStudio_v3.1\C6000\dsk6713\lib" -l"rts6700.lib" -l"dsk6713bsl.lib" -l"csl6713.lib"
+
+["Linker" Settings: "Release"]
+Options=-c -m".\Release\sine8_LED.map" -o".\Release\sine8_LED.out" -w -x
+
+["..\Support\C6713dsk.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["..\Support\C6713dsk.cmd" Settings: "Release"]
+LinkOrder=1
+

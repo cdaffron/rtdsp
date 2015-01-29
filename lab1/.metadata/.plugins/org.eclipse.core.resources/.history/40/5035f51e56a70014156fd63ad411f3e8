@@ -1,0 +1,71 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../lnk6713.cmd 
+
+ASM_SRCS += \
+../Vectors_poll.asm \
+../vectors.asm 
+
+C_SRCS += \
+../DSK6713_Support.c \
+../ISRs.c \
+../Sine8_LED.c \
+../StartUp.c \
+../c6713dskinit.c 
+
+OBJS += \
+./DSK6713_Support.obj \
+./ISRs.obj \
+./Sine8_LED.obj \
+./StartUp.obj \
+./Vectors_poll.obj \
+./c6713dskinit.obj \
+./vectors.obj 
+
+ASM_DEPS += \
+./Vectors_poll.pp \
+./vectors.pp 
+
+C_DEPS += \
+./DSK6713_Support.pp \
+./ISRs.pp \
+./Sine8_LED.pp \
+./StartUp.pp \
+./c6713dskinit.pp 
+
+C_DEPS__QUOTED += \
+"DSK6713_Support.pp" \
+"ISRs.pp" \
+"Sine8_LED.pp" \
+"StartUp.pp" \
+"c6713dskinit.pp" 
+
+OBJS__QUOTED += \
+"DSK6713_Support.obj" \
+"ISRs.obj" \
+"Sine8_LED.obj" \
+"StartUp.obj" \
+"Vectors_poll.obj" \
+"c6713dskinit.obj" \
+"vectors.obj" 
+
+ASM_DEPS__QUOTED += \
+"Vectors_poll.pp" \
+"vectors.pp" 
+
+C_SRCS__QUOTED += \
+"../DSK6713_Support.c" \
+"../ISRs.c" \
+"../Sine8_LED.c" \
+"../StartUp.c" \
+"../c6713dskinit.c" 
+
+ASM_SRCS__QUOTED += \
+"../Vectors_poll.asm" \
+"../vectors.asm" 
+
+
