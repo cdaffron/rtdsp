@@ -4,7 +4,7 @@
 		<item value="true" key="LegacyProjectSelectionPage.COPY_INTO_WORKSPACE"/>
 		<item value="false" key="LegacyProjectSelectionPage.SELECT_DIRECTORY"/>
 		<item value="" key="AdvancedOptionsPage.COMMON_ROOT_VAR_NAME"/>
-		<item value="C:\Users\cdaffron\Downloads\C6713\C6713\sine8_LED\sine8_LED.pjt" key="LegacyProjectSelectionPage.BROWSE_FILE_FILTER"/>
+		<item value="C:\Users\cdaffron\Downloads\C6713\C6713\loop_poll\loop_poll.pjt" key="LegacyProjectSelectionPage.BROWSE_FILE_FILTER"/>
 		<item value="false" key="AdvancedOptionsPage.USE_COMMON_ROOT"/>
 		<item value="" key="AdvancedOptionsPage.COMMON_ROOT_PATH"/>
 	</section>

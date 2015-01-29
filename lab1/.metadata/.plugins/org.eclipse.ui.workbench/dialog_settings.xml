@@ -3,8 +3,8 @@
 	<section name="MemoryDumperFillAction">
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="1440" key="dialogWidth"/>
-		<item value="760" key="dialogHeight"/>
+		<item value="1362" key="dialogWidth"/>
+		<item value="726" key="dialogHeight"/>
 		<list key="orderedProviders">
 		</list>
 		<list key="textArray">
@@ -13,5 +13,8 @@
 		</list>
 		<list key="textEntries">
 		</list>
+	</section>
+	<section name="GelLoadDialog">
+		<item value="C:\Users\cdaffron\git\rtdsp\lab1\sine8_LED" key="filterPath"/>
 	</section>
 </section>
