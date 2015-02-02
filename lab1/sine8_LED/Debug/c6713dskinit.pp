@@ -1,7 +1,7 @@
 # FIXED
 
-c6713dskinit.obj: C:/Users/cdaffron/Downloads/C6713/C6713/Support/c6713dskinit.c
-c6713dskinit.obj: C:/Users/cdaffron/Downloads/C6713/C6713/Support/C6713dskinit.h
+c6713dskinit.obj: ../c6713dskinit.c
+c6713dskinit.obj: ../C6713dskinit.h
 c6713dskinit.obj: C:/ti/CCStudio/c6000/dsk6713/include/dsk6713.h
 c6713dskinit.obj: C:/ti/C6xCSL/include/csl.h
 c6713dskinit.obj: C:/ti/C6xCSL/include/csl_chip.h
@@ -19,8 +19,8 @@ c6713dskinit.obj: C:/ti/CCStudio/c6000/dsk6713/include/dsk6713_aic23.h
 c6713dskinit.obj: C:/ti/C6xCSL/include/csl_mcbsp.h
 c6713dskinit.obj: C:/ti/C6xCSL/include/csl_mcbsphal.h
 
-C:/Users/cdaffron/Downloads/C6713/C6713/Support/c6713dskinit.c: 
-C:/Users/cdaffron/Downloads/C6713/C6713/Support/C6713dskinit.h: 
+../c6713dskinit.c: 
+../C6713dskinit.h: 
 C:/ti/CCStudio/c6000/dsk6713/include/dsk6713.h: 
 C:/ti/C6xCSL/include/csl.h: 
 C:/ti/C6xCSL/include/csl_chip.h: 

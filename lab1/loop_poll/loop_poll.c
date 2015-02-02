@@ -3,16 +3,23 @@
 Uint32 fs=DSK6713_AIC23_FREQ_8KHZ;	//set sampling rate
 #define DSK6713_AIC23_INPUT_MIC 0x0015
 #define DSK6713_AIC23_INPUT_LINE 0x0011
-Uint16 inputsource=DSK6713_AIC23_INPUT_MIC; // select input
+Uint16 inputsource=DSK6713_AIC23_INPUT_LINE; // select input
+short sample_data;
+
+#define BUFSIZE 512
+int buffer[BUFSIZE];
+int buf_ptr = 0;
 
 void main()
 {
-  short sample_data;
+  //short sample_data;
 
   comm_poll();	            //init DSK, codec, McBSP
   while(1)				    //infinite loop
   {
     sample_data = input_left_sample(); //input sample
+    buffer[buf_ptr] = sample_data;
+    if(++buf_ptr >= BUFSIZE) buf_ptr = 0;
     output_left_sample(sample_data);   //output sample
   }
 }

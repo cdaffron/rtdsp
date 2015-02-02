@@ -27,6 +27,7 @@ void main()
 		DSK6713_LED_off(0);
 		timeCounter = 0;
 		alternate = 0;
+		loopindex = 0;
 		while(timeCounter < 40000)
 		{
 			//if(alternate%2 == 0)

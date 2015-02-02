@@ -1,1 +1,1 @@
-"C:/Users/cdaffron/Downloads/C6713/C6713/Support/C6713dsk.cmd" "./Sine8_LED.obj" "./Vectors_poll.obj" "./c6713dskinit.obj" "../csl6713.lib" "../dsk6713bsl.lib" -l"rts6700.lib" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" -l"dsk6713bsl.lib" -l"csl6713.lib" 
+"../C6713dsk.cmd" "./Sine8_LED.obj" "./Vectors_poll.obj" "./c6713dskinit.obj" "../csl6713.lib" "../dsk6713bsl.lib" -l"rts6700.lib" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" -l"dsk6713bsl.lib" -l"csl6713.lib" 

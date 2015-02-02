@@ -1,0 +1,47 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+C:/Users/cdaffron/Downloads/C6713/C6713/Support/C6713dsk.cmd 
+
+ASM_SRCS += \
+../Vectors_poll.asm 
+
+C_SRCS += \
+C:/Users/cdaffron/Downloads/C6713/C6713/Support/c6713dskinit.c \
+../loop_poll.c 
+
+OBJS += \
+./Vectors_poll.obj \
+./c6713dskinit.obj \
+./loop_poll.obj 
+
+ASM_DEPS += \
+./Vectors_poll.pp 
+
+C_DEPS += \
+./c6713dskinit.pp \
+./loop_poll.pp 
+
+C_DEPS__QUOTED += \
+"c6713dskinit.pp" \
+"loop_poll.pp" 
+
+OBJS__QUOTED += \
+"Vectors_poll.obj" \
+"c6713dskinit.obj" \
+"loop_poll.obj" 
+
+ASM_DEPS__QUOTED += \
+"Vectors_poll.pp" 
+
+ASM_SRCS__QUOTED += \
+"../Vectors_poll.asm" 
+
+C_SRCS__QUOTED += \
+"C:/Users/cdaffron/Downloads/C6713/C6713/Support/c6713dskinit.c" \
+"../loop_poll.c" 
+
+

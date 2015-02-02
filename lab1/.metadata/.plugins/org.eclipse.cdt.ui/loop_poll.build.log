@@ -2,17 +2,6 @@
 **** Build of configuration Debug for project loop_poll ****
 
 "c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building target: loop_poll.out'
-'Invoking: C6000 Linker'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6710 --abi=coffabi -g --define="CHIP_6713" --display_error_number --diag_wrap=off --mem_model:data=far -z --stack_size=0x1000 -m"loop_poll.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" -i"C:/Users/cdaffron/git/rtdsp/lab1/loop_poll" -i"C:/Users/cdaffron/Downloads/C6713/C6713/loop_poll" -i"/lib" -i"c:/CCStudio_v3.1/C6000/dsk6713/lib" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="loop_poll_linkInfo.xml" --rom_model -o "loop_poll.out"  "C:/Users/cdaffron/Downloads/C6713/C6713/Support/C6713dsk.cmd" "./Vectors_poll.obj" "./c6713dskinit.obj" "./loop_poll.obj" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" -l"C:\ti\ccsv6\tools\compiler\c6000_7.4.12\lib\rts6700.lib" -l"C:\ti\CCStudio\c6000\dsk6713\lib\dsk6713bsl.lib" 
-<Linking>
-warning #16002-D: build attribute vendor section TI missing in "C:\ti\C6xCSL\lib_3x\csl6713.lib<csl_irq.obj>": compatibility cannot be determined
-warning #16002-D: build attribute vendor section TI missing in "C:\ti\C6xCSL\lib_3x\csl6713.lib<csl_mcbsp.obj>": compatibility cannot be determined
-warning #16002-D: build attribute vendor section TI missing in "C:\ti\CCStudio\c6000\dsk6713\lib\dsk6713bsl.lib<dsk6713.obj>": compatibility cannot be determined
-warning #16002-D: build attribute vendor section TI missing in "C:\ti\CCStudio\c6000\dsk6713\lib\dsk6713bsl.lib<dsk6713_aic23_opencodec.obj>": compatibility cannot be determined
-warning #16002-D: build attribute vendor section TI missing in "C:\ti\CCStudio\c6000\dsk6713\lib\dsk6713bsl.lib<dsk6713_aic23_registers.obj>": compatibility cannot be determined
-warning #16002-D: build attribute vendor section TI missing in "C:\ti\CCStudio\c6000\dsk6713\lib\dsk6713bsl.lib<dsk6713_aic23_setfreq.obj>": compatibility cannot be determined
-'Finished building target: loop_poll.out'
-' '
+gmake: Nothing to be done for `all'.
 
 **** Build Finished ****

@@ -24,23 +24,6 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>C6713dsk.cmd</name>
-			<type>1</type>
-			<locationURI>SRC_ROOT/Support/C6713dsk.cmd</locationURI>
-		</link>
-		<link>
-			<name>Vectors_poll.asm</name>
-			<type>1</type>
-			<locationURI>SRC_ROOT/Support/Vectors_poll.asm</locationURI>
-		</link>
-		<link>
-			<name>c6713dskinit.c</name>
-			<type>1</type>
-			<locationURI>SRC_ROOT/Support/c6713dskinit.c</locationURI>
-		</link>
-	</linkedResources>
 	<variableList>
 		<variable>
 			<name>SRC_ROOT</name>
