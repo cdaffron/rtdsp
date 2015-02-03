@@ -1,18 +1,26 @@
 
-**** Build of configuration Debug for project loop_poll ****
+**** Build of configuration Debug for project sine8_LED ****
 
 "c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../loop_poll.c'
+'Building file: ../Sine8_LED.c'
 'Invoking: C6000 Compiler'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.8/bin/cl6x" -mv6710 --abi=coffabi -g --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.8/include" --include_path="/packages/ti/xdais" --include_path="/include" --include_path="c:/CCStudio_v3.1/MyProjects/Support" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define="CHIP_6713" --display_error_number --diag_wrap=off --mem_model:data=far --preproc_with_compile --preproc_dependency="loop_poll.pp"  "../loop_poll.c"
-"../loop_poll.c", line 17: warning #225-D: function declared implicitly
-"../loop_poll.c", line 20: warning #225-D: function declared implicitly
-"../loop_poll.c", line 23: warning #225-D: function declared implicitly
-'Finished building: ../loop_poll.c'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.8/bin/cl6x" -mv6710 --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.8/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --include_path="C:/ti/C6xCSL/include" --include_path="/packages/ti/xdais" --include_path="/include" --include_path="c:/CCStudio_v3.1/C6000/dsk6713/include" --define="CHIP_6713" --display_error_number --diag_wrap=off --mem_model:data=far --preproc_with_compile --preproc_dependency="Sine8_LED.pp"  "../Sine8_LED.c"
+"../Sine8_LED.c", line 19: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 20: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 21: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 24: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 26: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 27: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 35: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 45: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 46: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 47: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 52: warning #225-D: function declared implicitly
+'Finished building: ../Sine8_LED.c'
 ' '
-'Building target: loop_poll.out'
+'Building target: sine8_LED.out'
 'Invoking: C6000 Linker'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.8/bin/cl6x" -mv6710 --abi=coffabi -g --define="CHIP_6713" --display_error_number --diag_wrap=off --mem_model:data=far -z --stack_size=0x1000 -m"loop_poll.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.8/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.8/include" -i"C:/Users/Chris/Documents/ECE 406/rtdsp/lab1/loop_poll" -i"C:/Users/cdaffron/Downloads/C6713/C6713/loop_poll" -i"/lib" -i"c:/CCStudio_v3.1/C6000/dsk6713/lib" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="loop_poll_linkInfo.xml" --rom_model -o "loop_poll.out"  "../C6713dsk.cmd" "./Vectors_poll.obj" "./c6713dskinit.obj" "./loop_poll.obj" "../csl6713.lib" "../dsk6713bsl.lib" "../rts6700.lib" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" -l"C:\ti\ccsv6\tools\compiler\c6000_7.4.8\lib\rts6700.lib" -l"C:\ti\CCStudio\c6000\dsk6713\lib\dsk6713bsl.lib" 
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6710 --abi=coffabi -g --define="CHIP_6713" --display_error_number --diag_wrap=off --mem_model:data=far -z --stack_size=0x1000 -m"sine8_LED.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" -i"C:/Users/cdaffron/git/rtdsp/lab1/sine8_LED" -i"C:/Users/cdaffron/Downloads/C6713/C6713/sine8_LED" -i"/lib" -i"c:/CCStudio_v3.1/C6000/dsk6713/lib" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="sine8_LED_linkInfo.xml" --rom_model -o "sine8_LED.out"  "../C6713dsk.cmd" "./Sine8_LED.obj" "./Vectors_poll.obj" "./c6713dskinit.obj" "../csl6713.lib" "../dsk6713bsl.lib" -l"rts6700.lib" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" -l"dsk6713bsl.lib" -l"csl6713.lib" 
 <Linking>
 warning #16002-D: build attribute vendor section TI missing in "../csl6713.lib<csl_irq.obj>": compatibility cannot be determined
 warning #16002-D: build attribute vendor section TI missing in "../csl6713.lib<csl_mcbsp.obj>": compatibility cannot be determined
@@ -20,14 +28,9 @@ warning #16002-D: build attribute vendor section TI missing in "../dsk6713bsl.li
 warning #16002-D: build attribute vendor section TI missing in "../dsk6713bsl.lib<dsk6713_aic23_opencodec.obj>": compatibility cannot be determined
 warning #16002-D: build attribute vendor section TI missing in "../dsk6713bsl.lib<dsk6713_aic23_registers.obj>": compatibility cannot be determined
 warning #16002-D: build attribute vendor section TI missing in "../dsk6713bsl.lib<dsk6713_aic23_setfreq.obj>": compatibility cannot be determined
-'Finished building target: loop_poll.out'
+warning #16002-D: build attribute vendor section TI missing in "../dsk6713bsl.lib<dsk6713_dip.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "../dsk6713bsl.lib<dsk6713_led.obj>": compatibility cannot be determined
+'Finished building target: sine8_LED.out'
 ' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project loop_poll ****
-
-"c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-gmake: Nothing to be done for `all'.
 
 **** Build Finished ****

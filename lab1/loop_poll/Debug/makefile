@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/c6000_7.4.8
+CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/c6000_7.4.12
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
@@ -134,13 +134,13 @@ all: loop_poll.out
 loop_poll.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C6000 Linker'
-	"c:/ti/ccsv6/tools/compiler/c6000_7.4.8/bin/cl6x" -mv6710 --abi=coffabi -g --define="CHIP_6713" --display_error_number --diag_wrap=off --mem_model:data=far -z --stack_size=0x1000 -m"loop_poll.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.8/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.8/include" -i"C:/Users/Chris/Documents/ECE 406/rtdsp/lab1/loop_poll" -i"C:/Users/cdaffron/Downloads/C6713/C6713/loop_poll" -i"/lib" -i"c:/CCStudio_v3.1/C6000/dsk6713/lib" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="loop_poll_linkInfo.xml" --rom_model -o "loop_poll.out" $(ORDERED_OBJS)
+	"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6710 --abi=coffabi -g --define="CHIP_6713" --display_error_number --diag_wrap=off --mem_model:data=far -z --stack_size=0x1000 -m"loop_poll.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" -i"C:/Users/cdaffron/git/rtdsp/lab1/loop_poll" -i"C:/Users/cdaffron/Downloads/C6713/C6713/loop_poll" -i"/lib" -i"c:/CCStudio_v3.1/C6000/dsk6713/lib" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="loop_poll_linkInfo.xml" --rom_model -o "loop_poll.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 loop_poll.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: C6000 Hex Utility'
-	"c:/ti/ccsv6/tools/compiler/c6000_7.4.8/bin/hex6x"  -o "loop_poll.hex" $(EXE_OUTPUTS__QUOTED)
+	"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/hex6x"  -o "loop_poll.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 

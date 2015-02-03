@@ -12,7 +12,7 @@ short gain = 10;			          //gain factor
 int timeCounter = 0;
 short alternate = 0;
 short sine_table[LOOPLENGTH]={0,707,1000,707,0,-707,-1000,-707}; //sine values
-short sine_table2[LOOPLENGTH*2]={1000,924,707,383,0,-383,-707,-924,-1000,-924,-707,-383,0,383,707,924};
+short sine_table2[LOOPLENGTH*2]={0,383,707,924,1000,924,707,383,0,-383,-707,-924,-1000,-924,-707,-383};
 
 void main()
 {
