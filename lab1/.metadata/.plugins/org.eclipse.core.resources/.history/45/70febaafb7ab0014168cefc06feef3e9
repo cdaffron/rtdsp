@@ -12,7 +12,7 @@ short gain = 10;			          //gain factor
 int timeCounter = 0;
 short alternate = 0;
 short sine_table[LOOPLENGTH]={0,707,1000,707,0,-707,-1000,-707}; //sine values
-short sine_table2[LOOPLENGTH*2]={1000,924,707,383,0,-383,-707,-924,-1000,-924,-707,-383,0,383,707,924}; //cosine values
+short sine_table2[LOOPLENGTH*2]={1000,924,707,383,0,-383,-707,-924,-1000,-924,-707,-383,0,383,707,924};
 
 void main()
 {
@@ -21,17 +21,19 @@ void main()
   DSK6713_DIP_init();			      //init DIP from BSL
   while(1) 				              //infinite loop
   {
-	//generate 500 Hz cosine wave when DIP3 is pressed
 	if(DSK6713_DIP_get(3)==0)
 	{
-		DSK6713_LED_on(3);	// turn on LED3
-		DSK6713_LED_off(0); // turn off other LEDs
+		DSK6713_LED_on(3);
+		DSK6713_LED_off(0);
 		timeCounter = 0;
 		alternate = 0;
 		loopindex = 0;
 		while(timeCounter < 40000)
 		{
-			output_left_sample(sine_table2[loopindex++]*gain);
+			//if(alternate%2 == 0)
+			//{
+				output_left_sample(sine_table2[loopindex++]*gain);
+			//}
 			alternate++;
 			if(loopindex >= LOOPLENGTH*2) loopindex = 0;
 			timeCounter++;
