@@ -1,0 +1,25 @@
+1. What is a polling-based approach? What's the potential problems in polling-based approach?
+    A polling-based approach is when the processor loops checking if new data is present and then processes is once it is ready.
+    The potential problem is that the processor wastes most of its time doing nothing instead of being useful.
+    
+2. What do you normally need to initialize before using the board?
+    Initialize the AIC23 codec. Set various values such as the sampling rate, the input source, and polling/interrupt mode.
+    Also automatically set are the input gain settings, digital audio interface format, etc.
+    
+3. How to control/configure DSK peripheral components like DIP switches and LEDs?
+    DSK peripheral components are controlled using functions that are defined in the BSL. For example, the DIP switches are queried using DSK_6713_DIP_get() and the
+    LEDs are turned on using DSK6713_LED_on()
+    
+4. Can you explain the APIs for ADC and DAC?
+    The APIs for the ADC and DAC are defined using the files that are included with the books and their behavior is defined by several functions.
+    For the Chassaing book, input_left_sample() retrieves a sample from the left channel of the enabled input of the ADC. If comm_poll() was called to
+    set up a polling-based approach, it polls and waits until the RRDY (receive ready) bit of the McBSP serial port control register (SPCR) indicates that
+    data is ready. If comm_intr() was called to set up an interrupt-based approach, the data should already be ready. output_left_sample() is used for
+    outputting data and works in a similar way, checking XRDY (transmit ready) of the McBSP SPCR.
+    
+5. Which serial port handles reading? Which for writing?
+    According to Chassaing (pg. 46), McBSP0 is used as unidirectional control and McBSP1 is used as a bidirectional channel for both sending and receiving.
+
+6. Given the sampling rate of the codec, are you able to tell the output frequency of the sinusoid? (e.g., in Task 1)
+    Yes, it takes 8 samples to output on full period of the sinusoid, and 8,000 samples are outputted every second, so 1,000 sinusoids are outputted per second,
+    for a frequency of 1 kHz.
