@@ -1,0 +1,36 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\CCStudio_v3.1\myprojects\dotp4\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\C6000\cgtools\lib\rts6700.lib"
+Source="dotp4.c"
+Source="..\Support\C6713DSK.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -s -fr"C:\CCStudio_v3.1\myprojects\dotp4\Debug" -d"CHIP_6713" -mv6710
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"C:\CCStudio_v3.1\myprojects\dotp4\Release" -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+
+["Linker" Settings: "Debug"]
+Options=-c -o".\Debug\Dotp4.out" -x -l"rts6700.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\Dotp4.map" -o".\Release\Dotp4.out" -x
+

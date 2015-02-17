@@ -1,0 +1,7 @@
+
+!CONFIGURATION: 'com.ti.ccstudio.buildDefinitions.C6000.Release.2110495703' [Mon Feb 16 20:56:20 EST 2015]
+
+	!TOOL: 'com.ti.ccstudio.buildDefinitions.C6000_7.4.exe.compilerRelease.866354693'
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.C6000_7.4.exe.compilerRelease.866354693::!--symdebug:dwarf
+

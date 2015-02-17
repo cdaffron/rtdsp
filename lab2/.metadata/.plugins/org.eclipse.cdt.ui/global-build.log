@@ -1,0 +1,26 @@
+
+**** Clean-only build of configuration Debug for project Dotp4 ****
+
+"c:\\ti\\ccsv6\\utils\\bin\\gmake" -k clean 
+gmake: *** No rule to make target `clean'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Dotp4 ****
+
+"c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../dotp4.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6710 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --include_path="C:/ti/C6xCSL/include" --define="CHIP_6713" --display_error_number --diag_wrap=off --src_interlist --obj_directory="C:/CCStudio_v3.1/myprojects/dotp4/Debug" --preproc_with_compile --preproc_dependency="dotp4.pp"  "../dotp4.c"
+'Finished building: ../dotp4.c'
+' '
+'Building target: Dotp4.out'
+'Invoking: C6000 Linker'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6710 --abi=coffabi -g --define="CHIP_6713" --display_error_number --diag_wrap=off --src_interlist --obj_directory="C:/CCStudio_v3.1/myprojects/dotp4/Debug" -z -m"Dotp4.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" -i"C:/Users/cdaffron/git/rtdsp/lab2/Dotp4" -i"C:/Users/cdaffron/Downloads/C6713/C6713/dotp4" -i"/lib" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Dotp4_linkInfo.xml" --rom_model -o "Dotp4.out"  "C:/CCStudio_v3.1/myprojects/dotp4/Debug/dotp4.obj" "../C6713dsk.cmd" "C:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib/rts6700.lib" -l"C:\ti\ccsv6\tools\compiler\c6000_7.4.12\lib\rts6700.lib" -l"C:\ti\CCStudio\c6000\dsk6713\lib\dsk6713bsl.lib" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" 
+<Linking>
+warning #10210-D: creating ".stack" section with default size of 0x400; use the -stack option to change the default size
+warning #10210-D: creating ".sysmem" section with default size of 0x400; use the -heap option to change the default size
+'Finished building target: Dotp4.out'
+' '
+
+**** Build Finished ****

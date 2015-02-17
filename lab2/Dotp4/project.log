@@ -1,0 +1,9 @@
+!WARNING: Source file 'rts6700.lib' has been linked into the project relative to variable 'CG_TOOL_ROOT'.  It is recommended, however, that you avoid linking resources from the build-tool directory - consider using build-options to reference include-files and libraries.
+
+
+!CONFIGURATION: 'com.ti.ccstudio.buildDefinitions.C6000.Release.2095271164' [Mon Feb 16 21:53:31 EST 2015]
+
+	!TOOL: 'com.ti.ccstudio.buildDefinitions.C6000_7.4.exe.compilerRelease.1626709034'
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.C6000_7.4.exe.compilerRelease.1626709034::!--symdebug:dwarf
+
