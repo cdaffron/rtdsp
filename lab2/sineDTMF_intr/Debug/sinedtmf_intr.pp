@@ -16,10 +16,12 @@ sinedtmf_intr.obj: C:/ti/C6xCSL/include/csl_timer.h
 sinedtmf_intr.obj: C:/ti/C6xCSL/include/csl_timerhal.h
 sinedtmf_intr.obj: C:/ti/C6xCSL/include/csl_mcbsp.h
 sinedtmf_intr.obj: C:/ti/C6xCSL/include/csl_mcbsphal.h
+sinedtmf_intr.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/stdio.h
+sinedtmf_intr.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/linkage.h
+sinedtmf_intr.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/stdarg.h
 sinedtmf_intr.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/math.h
 sinedtmf_intr.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/float.h
 sinedtmf_intr.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/access.h
-sinedtmf_intr.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/linkage.h
 sinedtmf_intr.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/elfnames.h
 sinedtmf_intr.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/mathf.h
 sinedtmf_intr.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/unaccess.h
@@ -42,10 +44,12 @@ C:/ti/C6xCSL/include/csl_timer.h:
 C:/ti/C6xCSL/include/csl_timerhal.h: 
 C:/ti/C6xCSL/include/csl_mcbsp.h: 
 C:/ti/C6xCSL/include/csl_mcbsphal.h: 
+C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/stdio.h: 
+C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/linkage.h: 
+C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/stdarg.h: 
 C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/math.h: 
 C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/float.h: 
 C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/access.h: 
-C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/linkage.h: 
 C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/elfnames.h: 
 C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/mathf.h: 
 C:/ti/ccsv6/tools/compiler/c6000_7.4.12/include/unaccess.h: 

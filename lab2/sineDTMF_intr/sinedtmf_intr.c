@@ -1,5 +1,6 @@
 //sinedtmf_intr.c DTMF tone generation using lookup table
 #include "DSK6713_AIC23.h"	          // codec support
+#include "stdio.h"
 Uint32 fs=DSK6713_AIC23_FREQ_16KHZ;	    //set sampling rate
 #define DSK6713_AIC23_INPUT_MIC 0x0015
 #define DSK6713_AIC23_INPUT_LINE 0x0011
@@ -31,13 +32,20 @@ int dip1state = 1;
 int dip2state = 1;
 int dip3state = 1;
 
+#define LEFT  0
+#define RIGHT 1
+union {Uint32 uint; short channel[2];} AIC23_data;
+
 interrupt void c_int11()    //interrupt service routine
 {
   // THIS CODE IS FOR THE FIRST AND SECOND PARTS
-  //output_left_sample(sine_table[(short)loopindexlow] + sine_table[(short)loopindexhigh]);
-  /*output_left_sample(sine_table[(short)loopindexlow]);
-  output_right_sample(sine_table[(short)loopindexhigh]);
-  loopindexlow += STEP_697;
+  output_left_sample((sine_table[(short)loopindexlow] + sine_table[(short)loopindexhigh])/10);
+  //AIC23_data.channel[LEFT] = sine_table[(short)loopindexlow];
+  //AIC23_data.channel[RIGHT] = sine_table[(short)loopindexhigh];
+  //output_sample(AIC23_data.uint);
+  //output_left_sample(sine_table[(short)loopindexlow]);
+  //output_right_sample(sine_table[(short)loopindexhigh]);
+  /*loopindexlow += STEP_697;
   if (loopindexlow > (float)TABLESIZE)
     loopindexlow -= (float)TABLESIZE;
   loopindexhigh += STEP_1477;
@@ -45,6 +53,7 @@ interrupt void c_int11()    //interrupt service routine
     loopindexhigh -= (float)TABLESIZE;*/
 
   // THIS CODE IS FOR THE THIRD PART
+  //printf("Inside the interrupt\n");
   if(inLoop == 1)
   {
 	  output_left_sample(sine_table[(short)loopindexlow] + sine_table[(short)loopindexhigh]);
@@ -194,10 +203,12 @@ interrupt void c_int11()    //interrupt service routine
 		  dip3state = DSK6713_DIP_get(3);
 	  }
 
-	  if( startCounter > 16000 )
+	  if( startCounter > 32000 )
 	  {
 		  startCounter = 0;
 		  inLoop = 1;
+		  loopindexlow = 0.0;
+		  loopindexhigh = 0.0;
 	  }
   }
 
@@ -207,6 +218,7 @@ interrupt void c_int11()    //interrupt service routine
 void main()
 {
   comm_intr();              // initialise DSK
+  printf("Hello\n");
   for (i=0 ; i< TABLESIZE ; i++)
     sine_table[i] = (short)(10000.0*sin(2*PI*i/TABLESIZE));
   while(1);

@@ -7,4 +7,5 @@
 	<codegenToolVersion value="7.4.12"/>
 	<isElfFormat value="false"/>
 	<rts value=""/>
+	<isTargetManual value="false"/>
 </projectOptions>
