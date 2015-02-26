@@ -1,7 +1,7 @@
 ******************************************************************************
-               TMS320C6x Linker PC v7.4.12                     
+               TMS320C6x Linker PC v7.4.8                      
 ******************************************************************************
->> Linked Mon Feb 02 14:51:04 2015
+>> Linked Thu Feb 05 11:45:53 2015
 
 OUTPUT FILE NAME:   <loop_poll.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 00002100
@@ -24,8 +24,6 @@ section   page    origin      length       input sections
 --------  ----  ----------  ----------   ----------------
 .vectors   0    00000000    00000200     
                   00000000    00000200     Vectors_poll.obj (.vectors)
-
-.bss       0    00000220    00000000     UNINITIALIZED
 
 .text      0    00000220    00002180     
                   00000220    000007c0     c6713dskinit.obj (.text)
@@ -61,6 +59,8 @@ section   page    origin      length       input sections
                   00002340    00000020                 : csl_mcbsp.obj (.text:_MCBSP_xrdy)
                   00002360    00000020     rts6700.lib : exit.obj (.text:_abort)
                   00002380    00000020     csl6713.lib : csl_irq.obj (.text)
+
+.bss       0    00000220    00000000     UNINITIALIZED
 
 .stack     0    000023a0    00001000     UNINITIALIZED
                   000023a0    00000008     rts6700.lib : boot.obj (.stack)

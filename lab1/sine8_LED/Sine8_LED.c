@@ -12,7 +12,7 @@ short gain = 10;			          //gain factor
 int timeCounter = 0;
 short alternate = 0;
 short sine_table[LOOPLENGTH]={0,707,1000,707,0,-707,-1000,-707}; //sine values
-short sine_table2[LOOPLENGTH*2]={1000,924,707,383,0,-383,-707,-924,-1000,-924,-707,-383,0,383,707,924}; //cosine values
+short sine_table2[LOOPLENGTH*2]={0,383,707,924,1000,924,707,383,0,-383,-707,-924,-1000,-924,-707,-383}; //cosine values
 
 void main()
 {
@@ -37,10 +37,11 @@ void main()
 			timeCounter++;
 		}
 		DSK6713_LED_off(3);
+		loopindex = 0;
 	}
 	else if(DSK6713_DIP_get(0)==0) 		  //=0 if DIP switch #0 pressed
     {
-	  DSK6713_LED_off(3);
+	  //DSK6713_LED_off(3);
       DSK6713_LED_on(0);	   		      //turn LED #0 ON
       output_left_sample(sine_table[loopindex+=loopincr]*gain); //output sample
       if (loopindex >= LOOPLENGTH) loopindex = 0; //reset table index

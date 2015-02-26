@@ -1,14 +1,14 @@
 #define __signed_chars__ 1	/* Predefined */
-#define __DATE__ "Feb  2 2015"	/* Predefined */
-#define __TIME__ "14:47:09"	/* Predefined */
+#define __DATE__ "Feb  5 2015"	/* Predefined */
+#define __TIME__ "12:37:36"	/* Predefined */
 #define __STDC__ 1	/* Predefined */
 #define __STDC_VERSION__ 199409L	/* Predefined */
 #define __TI_INT40_T__ 1	/* Predefined */
 #define __TI_C99_COMPLEX_ENABLED__ 1	/* Predefined */
 #define __edg_front_end__ 1	/* Predefined */
 #define __EDG_VERSION__ 303	/* Predefined */
-#define __TI_COMPILER_VERSION__ 7004012	/* Predefined */
-#define __COMPILER_VERSION__ 7004012	/* Predefined */
+#define __TI_COMPILER_VERSION__ 7004008	/* Predefined */
+#define __COMPILER_VERSION__ 7004008	/* Predefined */
 #define _TMS320C6X 1	/* Predefined */
 #define __TMS320C6X__ 1	/* Predefined */
 #define _TMS320C6200 1	/* Predefined */
