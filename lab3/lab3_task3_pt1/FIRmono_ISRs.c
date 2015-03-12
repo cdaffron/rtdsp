@@ -56,16 +56,17 @@ interrupt void Codec_ISR()
 	xLeft[0]  = CodecDataIn.Channel[LEFT];	// current LEFT input value
 	yLeft = 0;				// initialize the output value
 
-	for (i = 0; i <= N/2; i++) {
+	for (i = 0; i < (N+1)/2; i++) {
 		yLeft += xLeft[i]*B[i];
-		yLeft += xLeft[N-1-i]*B[i];		// perform the dot-product
+		yLeft += xLeft[N-i]*B[i];		// perform the dot-product
 	}
 
-	if( ( N % 2 ) == 1 )
+	if( ( N % 2 ) == 0 )
 	{
-		yLeft += ( xLeft[ ( N/2 ) + 1 ] * B[ ( N/2 ) + 1 ] );
+		yLeft += ( xLeft[ ( N/2 )] * B[ ( N/2 )] );
 	}
 	
+
 	for (i = N; i > 0; i--) {
 		xLeft[i] = xLeft[i-1];		// shift for the next input
 	}
