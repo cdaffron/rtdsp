@@ -1,1 +1,1 @@
-"./DSK6713_Support.obj" "./IIRmono_ISRs.obj" "./StartUp.obj" "./main.obj" "./vectors.obj" "../lnk6713.cmd" -l"libc.a" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" 
+"./DSK6713_Support.obj" "./IIRmono_ISRs.obj" "./StartUp.obj" "./coeff.obj" "./main.obj" "./vectors.obj" "../lnk6713.cmd" -l"libc.a" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" 
