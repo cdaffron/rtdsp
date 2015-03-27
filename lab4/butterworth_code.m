@@ -9,12 +9,12 @@ Rp = -20 * log10(1 - hdelta_p);
 Rs = -20 * log10(hdelta_s);
 
 %% Butterworth Impulse Invariance Section
-% [n,Wn] = buttord(Wp, Ws, Rp, Rs);
-% [b,a] = butter(n, Wn, 'bandpass');
-% % freqz(b,a);
-% [bz, az] = impinvar( b, a );
-% %[Hz, Wz] = freqz(bz,az);
-% freqz(bz,az);
+[n,Wn] = buttord(Wp, Ws, Rp, Rs, 's');
+[b,a] = butter(n, Wn, 'bandpass', 's');
+% freqz(b,a);
+[bz, az] = impinvar( b, a , 10);
+%[Hz, Wz] = freqz(bz,az);
+freqz(bz,az);
 
 %% Butterworth Bilinear Transformation Section
 % [n,Wn] = buttord(Wp, Ws, Rp, Rs);
@@ -24,8 +24,8 @@ Rs = -20 * log10(hdelta_s);
 % freqz(bz,az);
 
 %% Elliptic Bilinear Transformation Section
-[n,Wn] = ellipord(Wp, Ws, Rp, Rs);
-[b,a] = ellip(n, Rp, Rs, Wp);
-[bz,az] = bilinear( b, a, 1 );
-%[Hz, Wz] = freqz(bz,az);
-freqz(bz,az);
+% [n,Wn] = ellipord(Wp, Ws, Rp, Rs);
+% [b,a] = ellip(n, Rp, Rs, Wp);
+% [bz,az] = bilinear( b, a, 1 );
+% %[Hz, Wz] = freqz(bz,az);
+% freqz(bz,az);

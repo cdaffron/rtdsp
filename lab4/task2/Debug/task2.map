@@ -1,7 +1,7 @@
 ******************************************************************************
-               TMS320C6x Linker PC v7.4.8                      
+               TMS320C6x Linker PC v7.4.12                     
 ******************************************************************************
->> Linked Fri Mar 27 12:37:20 2015
+>> Linked Fri Mar 27 16:38:00 2015
 
 OUTPUT FILE NAME:   <task2.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 00001480
@@ -24,6 +24,8 @@ section   page    origin      length       input sections
 vectors    0    00000000    00000200     
                   00000000    00000200     vectors.obj (vectors)
 
+.data      0    00000200    00000000     UNINITIALIZED
+
 .text      0    00000200    00001480     
                   00000200    00000900     DSK6713_Support.obj (.text)
                   00000b00    00000380     IIRmono_ISRs.obj (.text:retain)
@@ -42,8 +44,6 @@ vectors    0    00000000    00000200
                   00001620    00000020                 : mpyf.obj (.text:__mpyf)
                   00001640    00000020                 : subf.obj (.text:__subf)
                   00001660    00000020                 : exit.obj (.text:_abort)
-
-.data      0    00000200    00000000     UNINITIALIZED
 
 .stack     0    00001680    00000400     UNINITIALIZED
                   00001680    00000008     rts6700.lib : boot.obj (.stack)

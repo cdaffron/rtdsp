@@ -5,7 +5,7 @@
 /* IIR filter coefficients             */
 
 
-#define N 20
+#define N 32
 
 extern float B[];
 extern float A[];

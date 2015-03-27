@@ -67,19 +67,19 @@ interrupt void Codec_ISR()
  	int i;
  	yn = 0.0;
  	x[0] = CodecDataIn.Channel[LEFT];
-// 	yn += ((B[0]*x[0]));
-
-// 	for(i = 1; i <= N; i++)
-// 	{
-// 		yn += B[i]*x[i];
-// 		yn -= A[i]*y[i];
-// 	}
-
- 	for(i = 0; i <= N; i++)
- 		yn += (B[i]*x[i]);
+ 	yn += ((B[0]*x[0]));
 
  	for(i = 1; i <= N; i++)
- 		yn -= (A[i]*y[i]);
+ 	{
+ 		yn += B[i]*x[i];
+ 		yn -= A[i]*y[i];
+ 	}
+
+// 	for(i = 0; i <= N; i++)
+// 		yn += (B[i]*x[i]);
+
+// 	for(i = 1; i <= N; i++)
+// 		yn -= (A[i]*y[i]);
 
  	y[0] = yn;
  	for(i = N; i > 0; i--)
