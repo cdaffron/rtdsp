@@ -10,6 +10,7 @@ window = kaiser(n+1,beta);
 %freqz(window);
 hh = fir1(n,Wn,ftype,window,'noscale');
 
-[H,f] = freqz(hh,1,1024,fsamp);
-plot(f,abs(H))
-grid
+% [H,f] = freqz(hh,1,1024,fsamp);
+% plot(f,abs(H))
+% grid
+freqz(hh,1,1024,fsamp);
