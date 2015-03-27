@@ -5,7 +5,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.Spectrum Digital DSK-EVM-eZdsp onboard USB Emulator/TMS320C671X" value="${build_artifact:task2}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.Spectrum Digital DSK-EVM-eZdsp onboard USB Emulator/TMS320C671X" value="task2"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:task2}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Spectrum Digital DSK-EVM-eZdsp onboard USB Emulator/TMS320C671X" value="C:/Users\cdaffron\git\rtdsp\lab4\task2\Debug\task2.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Spectrum Digital DSK-EVM-eZdsp onboard USB Emulator/TMS320C671X" value="C:/Users\Chris\Documents\ECE 406\rtdsp\lab4\task2\Debug\task2.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/task2"/>
 </listAttribute>
