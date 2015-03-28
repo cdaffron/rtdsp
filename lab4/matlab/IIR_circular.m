@@ -1,5 +1,5 @@
 sampling_freq = 48000;
-signal_freq = 8000;
+signal_freq = 16000;
 N = 32;
 
 num = [
@@ -82,21 +82,32 @@ audio_out = zeros(size(audio_in));
 working_data_in = zeros(N+1,1);
 working_data_out = zeros(N+1,1);
 
+sampleInd = 1;
+indLeft = 1;
+
 for j=1:length(audio_in)
-    working_data_in(1)=audio_in(j);
+    working_data_in(sampleInd)=audio_in(j);
     temp = 0.0;
     
-    temp = temp + (num(1)*working_data_in(1));
-    
-    for i=2:N+1
-       temp = temp + (num(i)*working_data_in(i)) - (denom(i)*working_data_out(i));
+    temp = temp + (num(1)*working_data_in(sampleInd));
+    indLeft = sampleInd - 1;
+    if( indLeft < 1)
+        indLeft = N + 1;
     end
     
-    working_data_out(1) = temp;
+    for i=2:N+1
+       temp = temp + (num(i)*working_data_in(indLeft)) - (denom(i)*working_data_out(indLeft));
+       indLeft = indLeft - 1;
+       if( indLeft < 1)
+           indLeft = N + 1;
+       end
+    end
     
-    for i=N+1:-1:2
-        working_data_in(i) = working_data_in(i - 1);
-        working_data_out(i) = working_data_out(i - 1);
+    working_data_out(sampleInd) = temp;
+    
+    sampleInd = sampleInd + 1;
+    if( sampleInd > (N+1))
+        sampleInd = 1;
     end
     
     audio_out(j) = temp;

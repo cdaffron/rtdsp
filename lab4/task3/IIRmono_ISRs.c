@@ -63,25 +63,28 @@ interrupt void Codec_ISR()
  	int indLeft;
 
  	yn = 0.0f;
- 	indLeft = sampleInd;
+ 	indLeft = sampleInd - 1;
+
+    if( indLeft < 0 )
+        indLeft = N;
 
  	x[sampleInd] = CodecDataIn.Channel[LEFT];
 
 // 	if(++sampleInd > N)
 // 		sampleInd = 0;
 
-// 	yn += (B[0]*x[indLeft]);
+	// yn += (B[0]*x[indLeft]);
  	yn += (B[0]*x[sampleInd]);
 // 	if(++indLeft > N)
 // 		indLeft = 0;
 
  	for(i = 1; i <= N; i++)
  	{
-// 		yn += ((B[i]*x[indLeft]) - (A[i]*y[indLeft]));
- 		yn += ((B[i]*x[(sampleInd+i)%(N+1)]));
-	    yn -= ((A[i]*y[(sampleInd+i)%(N+1)]));
-// 		if(++indLeft > N)
-// 			indLeft = 0;
+		yn += ((B[i]*x[indLeft]) - (A[i]*y[indLeft]));
+ 		// yn += ((B[i]*x[(sampleInd+i)%(N+1)]));
+	    // yn -= ((A[i]*y[(sampleInd+i)%(N+1)]));
+		if(--indLeft < 0)
+			indLeft = N;
  	}
 // 	for(i = N; i > 0; i--)
 // 	{
