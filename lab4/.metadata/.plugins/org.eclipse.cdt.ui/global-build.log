@@ -1,23 +1,32 @@
 
-**** Build of configuration Debug for project task3 ****
+**** Build of configuration Debug for project task2 ****
 
 "c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
 'Building file: ../IIRmono_ISRs.c'
 'Invoking: C6000 Compiler'
 "c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="IIRmono_ISRs.pp"  "../IIRmono_ISRs.c"
-"../IIRmono_ISRs.c", line 63: warning #552-D: variable "indLeft" was set but never used
 'Finished building: ../IIRmono_ISRs.c'
 ' '
-'Building target: task3.out'
+'Building file: ../StartUp.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.pp"  "../StartUp.c"
+'Finished building: ../StartUp.c'
+' '
+'Building file: ../coeff.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="coeff.pp"  "../coeff.c"
+'Finished building: ../coeff.c'
+' '
+'Building target: task2.out'
 'Invoking: C6000 Linker'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off -z -m"task3.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="task3_linkInfo.xml" --rom_model -o "task3.out"  "./DSK6713_Support.obj" "./IIRmono_ISRs.obj" "./StartUp.obj" "./coeff.obj" "./main.obj" "./vectors.obj" "../lnk6713.cmd" -l"libc.a" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" 
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off -z -m"task2.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="task2_linkInfo.xml" --rom_model -o "task2.out"  "./DSK6713_Support.obj" "./IIRmono_ISRs.obj" "./StartUp.obj" "./coeff.obj" "./main.obj" "./vectors.obj" "../lnk6713.cmd" -l"libc.a" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" 
 <Linking>
-'Finished building target: task3.out'
+'Finished building target: task2.out'
 ' '
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project task3 ****
+**** Build of configuration Debug for project task2 ****
 
 "c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
 gmake: Nothing to be done for `all'.

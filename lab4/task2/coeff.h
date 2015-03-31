@@ -4,8 +4,14 @@
 /* coeff.h                             */
 /* IIR filter coefficients             */
 
+/* ----- BUTTERWORTH BILINEAR ----- */
+//#define N 32
 
-#define N 32
+/* ----- ELLIPTIC BILINEAR ----- */
+#define N 10
+
+/* ----- BUTTERWORTH IMPULSE INVARIANCE ----- */
+//#define N 76
 
 extern float B[];
 extern float A[];
