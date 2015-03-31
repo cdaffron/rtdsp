@@ -8,10 +8,10 @@
 //#define N 32
 
 /* ----- ELLIPTIC BILINEAR ----- */
-#define N 10
+//#define N 10
 
 /* ----- BUTTERWORTH IMPULSE INVARIANCE ----- */
-//#define N 76
+#define N 76
 
 extern float B[];
 extern float A[];

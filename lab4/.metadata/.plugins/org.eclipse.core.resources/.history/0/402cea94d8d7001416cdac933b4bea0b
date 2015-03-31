@@ -5,10 +5,10 @@
 /* IIR filter coefficients             */
 
 /* ----- BUTTERWORTH BILINEAR ----- */
-#define N 32
+//#define N 32
 
 /* ----- ELLIPTIC BILINEAR ----- */
-//#define N 10
+#define N 10
 
 extern float B[];
 extern float A[];

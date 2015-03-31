@@ -9,6 +9,7 @@
 ///////////////////////////////////////////////////////////////////////
 
 #include "DSP_Config.h" 
+#include "coeff.h"
   
 // Data is received as 2 16-bit words (left/right) packed into one
 // 32-bit word.  The union allows the data to be accessed as a single 
@@ -25,14 +26,18 @@ volatile union {
 
 
 /* add any global variables here */
-#define N 1		// IIR filter order
+//#define N 20		// IIR filter order
 
-float B[N+1] = {1.0, -1.0};  // numerator coefficients
-float A[N+1] = {1.0, -0.9};  // denominator coefficients
-float x[N+1] = {0.0, 0.0};   // input value (buffered)
-float y[N+1] = {0.0, 0.0};   // output values (buffered)
+/* ----- BUTTERWORTH BILINEAR ----- */
+//float x[N+1] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};   // input value (buffered)
+//float y[N+1] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};   // output values (buffered)
 
-int yn;
+/* ----- ELLIPTIC BILINEAR ----- */
+float x[N+1] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+float y[N+1] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+
+float yn;
+int sampleInd = 0;
 
 interrupt void Codec_ISR()
 ///////////////////////////////////////////////////////////////////////
@@ -54,33 +59,49 @@ interrupt void Codec_ISR()
 		return;								// so serial port is reset to recover
 
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
-	
-	/* I added my IIR filter routine here */
-//	x[0] = CodecDataIn.Channel[LEFT];		// current input value
-
-//	y[0] = -A[1]*y[1] + B[0]*x[0] + B[1]*x[1]; // calc. the output
-
-//	x[1] = x[0];							// setup for the next input
-//	y[1] = y[0];							// setup for the next input
-	
-//	CodecDataOut.Channel[LEFT]  = y[0];		// setup the LEFT value
-	/* end of my IIR filter routine	*/
 
  	int i;
- 	yn = 0;
- 	x[0] = CodecDataIn.Channel[LEFT];
- 	yn += (b[0]*x[0]>>15);
+ 	int indLeft;
+
+ 	yn = 0.0f;
+ 	indLeft = sampleInd - 1;
+
+    if( indLeft < 0 )
+        indLeft = N;
+
+ 	x[sampleInd] = CodecDataIn.Channel[LEFT];
+
+// 	if(++sampleInd > N)
+// 		sampleInd = 0;
+
+	// yn += (B[0]*x[indLeft]);
+ 	yn += (B[0]*x[sampleInd]);
+// 	if(++indLeft > N)
+// 		indLeft = 0;
 
  	for(i = 1; i <= N; i++)
- 		yn += ((b[i]*x[i]>>15) - (a[i]*y[i]>>15));
- 	for(i = N; i > 0; i--)
  	{
- 		x[i]=x[i-1];
- 		y[i]=y[i-1];
+		yn += ((B[i]*x[indLeft]) - (A[i]*y[indLeft]));
+ 		// yn += ((B[i]*x[(sampleInd+i)%(N+1)]));
+	    // yn -= ((A[i]*y[(sampleInd+i)%(N+1)]));
+		if(--indLeft < 0)
+			indLeft = N;
  	}
- 	y[1] = yn;
+// 	for(i = N; i > 0; i--)
+// 	{
+// 		x[i]=x[i-1];
+// 		y[i]=y[i-1];
+// 	}
+
+ 	y[sampleInd] = yn;
+
+ 	if(++sampleInd > N)
+ 		sampleInd = 0;
+
+// 	y[sampleInd] = yn;
 
  	CodecDataOut.Channel[LEFT] = yn;
+ 	CodecDataOut.Channel[RIGHT] = yn;
 
 	WriteCodecData(CodecDataOut.UINT);		// send output data to  port
 
