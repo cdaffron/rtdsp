@@ -76,24 +76,15 @@ interrupt void Codec_ISR()
  		yn -= (A[i]*y[i]);
  	}
 
-// 	for(i = 0; i <= N; i++)
-// 		yn += (B[i]*x[i]);
-
-// 	for(i = 1; i <= N; i++)
-// 		yn -= (A[i]*y[i]);
-
  	y[0] = yn;
  	for(i = N; i > 0; i--)
  	{
  		x[i]=x[i-1];
  		y[i]=y[i-1];
  	}
-// 	y[0] = yn * 500;
 
  	CodecDataOut.Channel[LEFT] = (Int16)yn;
  	CodecDataOut.Channel[RIGHT] = (Int16)yn;
-// 	CodecDataOut.Channel[LEFT] = x[0];
-// 	CodecDataOut.Channel[RIGHT] = x[0];
 
 	WriteCodecData(CodecDataOut.UINT);		// send output data to  port
 
