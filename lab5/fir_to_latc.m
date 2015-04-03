@@ -1,4 +1,5 @@
 clear all;
+
 B = [
 -0.004912325099208618
 -0.014619079916495251
@@ -61,16 +62,29 @@ B = [
 -0.014619079916495251
 -0.0049123250992086183 ];
 
-% A = ones(size(B));
-A = 1;
+% K = tf2latc(B);
+[SOS, G] = tf2sos(B,1);
+[Z,P,K] = sos2zp(SOS,G);
 
-[SOS, G] = tf2sos(B, A);
+for i=1:length(Z)
+    if abs(Z(i)) == 1
+%         disp('On unit circle')
+%         disp(Z(i))
+        Z(i) = Z(i) + 0.01;
+%         disp(Z(i))
+%         disp(abs(Z(i)))
+    end
+end
+
+[SOS, G] = zp2sos(Z,P,K);
+[Bn,An] = sos2tf(SOS,G);
+K = tf2latc(Bn);
 
 sampling_freq = 48000;
 signal_freq = 16000;
 time = (0:1/sampling_freq:0.05)';
 audio_in = sin(2 * pi * signal_freq * time);
 
-% audio_out = filter(B,A,audio_in);
-audio_out = sosfilt(SOS,audio_in);
+[audio_out, temp] = latcfilt(K,audio_in);
+audio_out = audio_out * G;
 plot(audio_out);
