@@ -1,0 +1,25 @@
+#define __signed_chars__ 1	/* Predefined */
+#define __DATE__ "Apr  3 2015"	/* Predefined */
+#define __TIME__ "09:45:22"	/* Predefined */
+#define __STDC__ 1	/* Predefined */
+#define __STDC_VERSION__ 199409L	/* Predefined */
+#define __TI_INT40_T__ 1	/* Predefined */
+#define __TI_C99_COMPLEX_ENABLED__ 1	/* Predefined */
+#define __edg_front_end__ 1	/* Predefined */
+#define __EDG_VERSION__ 303	/* Predefined */
+#define __TI_COMPILER_VERSION__ 7004012	/* Predefined */
+#define __COMPILER_VERSION__ 7004012	/* Predefined */
+#define _TMS320C6X 1	/* Predefined */
+#define __TMS320C6X__ 1	/* Predefined */
+#define _TMS320C6200 1	/* Predefined */
+#define _LITTLE_ENDIAN 1	/* Predefined */
+#define __TI_40BIT_LONG__ 1	/* Predefined */
+#define __SIZE_T_TYPE__ unsigned	/* Predefined */
+#define __PTRDIFF_T_TYPE__ int	/* Predefined */
+#define __WCHAR_T_TYPE__ unsigned short	/* Predefined */
+#define __little_endian__ 1	/* Predefined */
+#define __TI_STRICT_ANSI_MODE__ 1	/* Predefined */
+#define __TI_WCHAR_T_BITS__ 16	/* Predefined */
+#define __TI_GNU_ATTRIBUTE_SUPPORT__ 1	/* Predefined */
+#define __TI_STRICT_FP_MODE__ 1	/* Predefined */
+#define CHIP_6713 1

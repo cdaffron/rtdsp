@@ -1,0 +1,49 @@
+
+**** Clean-only build of configuration Debug for project firDFii ****
+
+"c:\\ti\\ccsv6\\utils\\bin\\gmake" -k clean 
+gmake: *** No rule to make target `clean'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project firDFii ****
+
+"c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../DSK6713_Support.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="DSK6713_Support.pp"  "../DSK6713_Support.c"
+'Finished building: ../DSK6713_Support.c'
+' '
+'Building file: ../FIRmono_ISRs.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="FIRmono_ISRs.pp"  "../FIRmono_ISRs.c"
+'Finished building: ../FIRmono_ISRs.c'
+' '
+'Building file: ../StartUp.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.pp"  "../StartUp.c"
+'Finished building: ../StartUp.c'
+' '
+'Building file: ../coeff.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="coeff.pp"  "../coeff.c"
+'Finished building: ../coeff.c'
+' '
+'Building file: ../main.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+'Finished building: ../main.c'
+' '
+'Building file: ../vectors.asm'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.pp"  "../vectors.asm"
+'Finished building: ../vectors.asm'
+' '
+'Building target: firDFii.out'
+'Invoking: C6000 Linker'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -g --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off -z -m"firDFii.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="firDFii_linkInfo.xml" --rom_model -o "firDFii.out"  "./DSK6713_Support.obj" "./FIRmono_ISRs.obj" "./StartUp.obj" "./coeff.obj" "./main.obj" "./vectors.obj" "../lnk6713.cmd" -l"libc.a" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" -l"C:\ti\CCStudio\c6000\dsk6713\lib\dsk6713bsl.lib" 
+<Linking>
+'Finished building target: firDFii.out'
+' '
+
+**** Build Finished ****
