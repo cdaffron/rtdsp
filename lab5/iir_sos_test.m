@@ -1,5 +1,5 @@
 sampling_freq = 48000;
-signal_freq = 12000;
+signal_freq = 16000;
 N = 5;
 
 nSections = 5;
