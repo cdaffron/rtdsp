@@ -1,5 +1,5 @@
 sampling_freq = 48000;
-signal_freq = 12000;
+signal_freq = 16000;
 N = 3;
 
 section = zeros(length(SOS),3);
@@ -10,7 +10,7 @@ time = (0:1/sampling_freq:0.05)';
 audio_in = sin(2 * pi * signal_freq * time);
 audio_out = zeros(size(audio_in));
 
-working_data = zeros(N+1,1);
+working_data = zeros(N,1);
 wDataBase = 1;
 wDataPtr = 1;
 

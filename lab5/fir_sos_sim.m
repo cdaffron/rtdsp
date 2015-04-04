@@ -10,7 +10,7 @@ time = (0:1/sampling_freq:0.05)';
 audio_in = sin(2 * pi * signal_freq * time);
 audio_out = zeros(size(audio_in));
 
-working_data = zeros(N+1,1);
+working_data = zeros(N,1);
 
 for j=1:length(audio_in)
     working_data(1)=audio_in(j);

@@ -26,7 +26,16 @@ volatile union {
 
 
 /* add any global variables here */
-float xLeft[N+1], *pLeft = xLeft;
+float workingData[3] = {0.0f, 0.0f, 0.0f};
+float section[nSections,3] = { {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, },
+                               {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, },
+                               {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, } };
+int wDataBase = 0;
+int wDataPtr = 0;
+int sDataBase = 0;
+int sDataPtr = 0;
+int sTemp;
+// float xLeft[N+1], *pLeft = xLeft;
 Int32 i;
 
 
@@ -52,20 +61,60 @@ interrupt void Codec_ISR()
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
 	
 	/* I added my mono FIR filter routine here */
-	*pLeft  = CodecDataIn.Channel[LEFT];	// store LEFT input value
+	// *pLeft  = CodecDataIn.Channel[LEFT];	// store LEFT input value
+    workingData[wDataBase] = CodecDataIn.Channel[LEFT];
+    wDataPtr = wDataBase;
+    sDataPtr = sDataBase;
 
-	output = 0;								// set up for LEFT channel
-	p = pLeft;								// save current sample pointer
-	if(++pLeft > &xLeft[N])					// update pointer, wrap if necessary
-		pLeft = xLeft;						// and store
-	for (i = 0; i <= N; i++) {				// do LEFT channel FIR
-	        output += *p-- * B[i];  		// multiply and accumulate
-	        if(p < &xLeft[0])       		// check for pointer wrap around
-        	    p = &xLeft[N];
-	}
+    section[0][sDataPtr] = SOS[0][0] * workingData[wDataPtr];
+    wDataPtr = wDataPtr - 1;
+    if( wDataPtr < 0 )
+        wDataPtr = 2;
 
-	CodecDataOut.Channel[LEFT]  = output; // store filtered value		
-	CodecDataOut.Channel[RIGHT] = output; // store filtered value	
+    section[0][sDataPtr] += SOS[0][1] * workingData[wDataPtr];
+    wDataPtr--;
+    if( wDataPtr < 0 )
+        wDataPtr = 2;
+
+    section[0][sDataPtr] += SOS[0][2] * workingData[wDataPtr];
+    
+    for( i = 1; i < nSections; i++ )
+    {
+        sTemp = sDataPtr;
+        section[i][sDataPtr] = SOS[i][0] * section[i - 1][sDataPtr];
+        sTemp--;
+        if( sTemp < 0 )
+            sTemp = 2;
+
+        section[i][sDataPtr] += SOS[i][1] * section[i - 1][sTemp];
+        sTemp--;
+        if( sTemp < 0 )
+            sTemp = 2;
+
+        section[i][sDataPtr] += SOS[i][2] * section[i - 1][sTemp];
+    }
+
+	// output = 0;								// set up for LEFT channel
+	// p = pLeft;								// save current sample pointer
+	// if(++pLeft > &xLeft[N])					// update pointer, wrap if necessary
+		// pLeft = xLeft;						// and store
+	// for (i = 0; i <= N; i++) {				// do LEFT channel FIR
+	        // output += *p-- * B[i];  		// multiply and accumulate
+	        // if(p < &xLeft[0])       		// check for pointer wrap around
+        	    // p = &xLeft[N];
+	// }
+
+	CodecDataOut.Channel[LEFT]  = section[nSections - 1][sDataPtr] * G; // store filtered value		
+
+    sDataBase++;
+    if( sDataBase > 2 )
+        sDataBase = 0;
+
+    wDataBase++;
+    if( wDataBase > 2 )
+        wDataBase = 0;
+
+	// CodecDataOut.Channel[RIGHT] = output; // store filtered value	
 	/* end of my mono FIR filter routine */	
 
 	WriteCodecData(CodecDataOut.UINT);		// send output data to  port

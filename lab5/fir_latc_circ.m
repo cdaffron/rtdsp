@@ -7,8 +7,8 @@ time = (0:1/sampling_freq:0.05)';
 audio_in = sin(2 * pi * signal_freq * time);
 audio_out = zeros(size(audio_in));
 
-working_data_a = zeros(N+1,1);
-working_data_b = zeros(N+1,2);
+working_data_a = zeros(N,1);
+working_data_b = zeros(N,2);
 audio_in_prev = 0;
 
 wDataBase = 1;
