@@ -34,7 +34,6 @@ int wDataPtr = 0;
 int sDataBase = 0;
 int sDataPtr = 0;
 int sTemp;
-// float xLeft[N+1], *pLeft = xLeft;
 Int32 i;
 
 
@@ -51,16 +50,12 @@ interrupt void Codec_ISR()
 // Notes:     None
 ///////////////////////////////////////////////////////////////////////
 {                    
-	/* add any local variables here */
-//	float output, *p;
 
  	if(CheckForOverrun())					// overrun error occurred (i.e. halted DSP)
 		return;								// so serial port is reset to recover
 
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
 	
-	/* I added my mono FIR filter routine here */
-	// *pLeft  = CodecDataIn.Channel[LEFT];	// store LEFT input value
     workingData[wDataBase] = CodecDataIn.Channel[LEFT];
     wDataPtr = wDataBase;
     sDataPtr = sDataBase;
@@ -93,7 +88,6 @@ interrupt void Codec_ISR()
         section[i][sDataPtr] += SOS[i][2] * section[i - 1][sTemp];
     }
 
-
 	CodecDataOut.Channel[LEFT]  = section[nSections - 1][sDataPtr] * G; // store filtered value
 
     sDataBase++;
@@ -103,9 +97,6 @@ interrupt void Codec_ISR()
     wDataBase++;
     if( wDataBase > 2 )
         wDataBase = 0;
-
-	// CodecDataOut.Channel[RIGHT] = output; // store filtered value	
-	/* end of my mono FIR filter routine */	
 
 	WriteCodecData(CodecDataOut.UINT);		// send output data to  port
 }

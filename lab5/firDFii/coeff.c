@@ -5,11 +5,6 @@
 /* FIR filter coefficients             */
 /* exported by MATLAB using FIR_DUMP2C */
 
-
-/* Equiripple FIR LPF with passband to */
-/* 5 kHz assuming Fs=48 kHz            */
-
-
 #include "coeff.h"
 
 float SOS[nSections][6] = {

@@ -1,5 +1,4 @@
 clear all;
-
 B = [
 -0.004912325099208618
 -0.014619079916495251
@@ -62,17 +61,12 @@ B = [
 -0.014619079916495251
 -0.0049123250992086183 ];
 
-% K = tf2latc(B);
 [SOS, G] = tf2sos(B,1);
 [Z,P,K] = sos2zp(SOS,G);
 
 for i=1:length(Z)
     if abs(Z(i)) == 1
-%         disp('On unit circle')
-%         disp(Z(i))
         Z(i) = Z(i) + 0.01;
-%         disp(Z(i))
-%         disp(abs(Z(i)))
     end
 end
 
