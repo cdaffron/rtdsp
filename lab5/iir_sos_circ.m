@@ -1,5 +1,5 @@
 sampling_freq = 48000;
-signal_freq = 12000;
+signal_freq = 16000;
 N = 5;
 
 nSections = 5;
@@ -14,7 +14,9 @@ audio_out = zeros(size(audio_in));
 sDataBase = 1;
 
 for j=1:length(audio_in)
-    working_data = audio_in(j) * G;
+%     working_data = audio_in(j) * G;
+    temp = input('Input Value\n');
+    working_data = temp * G;
     
     sTemp = sDataBase;
     sTemp = sTemp - 1;

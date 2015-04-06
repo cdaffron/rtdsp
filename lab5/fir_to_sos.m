@@ -67,10 +67,10 @@ A = 1;
 [SOS, G] = tf2sos(B, A);
 
 sampling_freq = 48000;
-signal_freq = 16000;
+signal_freq = 12000;
 time = (0:1/sampling_freq:0.05)';
 audio_in = sin(2 * pi * signal_freq * time);
 
 % audio_out = filter(B,A,audio_in);
-audio_out = sosfilt(SOS,audio_in);
+audio_out = sosfilt(SOS,audio_in) * G;
 plot(audio_out);

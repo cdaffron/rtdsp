@@ -1,5 +1,5 @@
 sampling_freq = 48000;
-signal_freq = 12000;
+signal_freq = 16000;
 N = 59;
 
 time = (0:1/sampling_freq:0.05)';
@@ -17,8 +17,12 @@ for j=1:length(audio_in)
     
     wDataPtr = wDataBase;
     
-    working_data_a(1) = audio_in(j) + (-K(1))*audio_in_prev;
-    working_data_b(1,wDataPtr) = (-K(1))*audio_in(j) + audio_in_prev;
+    temp = input('Enter value\n');
+    
+%     working_data_a(1) = audio_in(j) + (-K(1))*audio_in_prev;
+    working_data_a(1) = temp + (-K(1))*audio_in_prev;
+%     working_data_b(1,wDataPtr) = (-K(1))*audio_in(j) + audio_in_prev;
+    working_data_b(1,wDataPtr) = (-K(1))*temp + audio_in_prev;
     
     for i=2:N
         wTemp = wDataPtr - 1;
@@ -30,7 +34,8 @@ for j=1:length(audio_in)
     end
     
     audio_out(j) = working_data_a(N) * G;
-    audio_in_prev = audio_in(j);
+%     audio_in_prev = audio_in(j);
+    audio_in_prev = temp;
 
     wDataBase = wDataBase + 1;
     if( wDataBase > 2 )

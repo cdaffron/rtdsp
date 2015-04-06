@@ -81,7 +81,7 @@ end
 K = tf2latc(Bn);
 
 sampling_freq = 48000;
-signal_freq = 16000;
+signal_freq = 12000;
 time = (0:1/sampling_freq:0.05)';
 audio_in = sin(2 * pi * signal_freq * time);
 

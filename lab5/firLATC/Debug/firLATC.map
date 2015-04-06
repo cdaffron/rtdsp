@@ -1,0 +1,231 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.4.12                     
+******************************************************************************
+>> Linked Mon Apr 06 16:24:49 2015
+
+OUTPUT FILE NAME:   <firLATC.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00001220
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  vecs                  00000000   00000200  00000200  00000000  RWIX
+  IRAM                  00000200   0003fe00  00001e64  0003df9c  RWIX
+  SDRAM                 80000000   01000000  00000000  01000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+vectors    0    00000000    00000200     
+                  00000000    00000200     vectors.obj (vectors)
+
+.data      0    00000200    00000000     UNINITIALIZED
+
+.text      0    00000200    00001220     
+                  00000200    000006e0     DSK6713_Support.obj (.text)
+                  000008e0    00000340     FIRmono_ISRs_LATC.obj (.text:retain)
+                  00000c20    00000240     rts6700.lib : memcpy62.obj (.text:_memcpy)
+                  00000e60    00000100                 : autoinit.obj (.text:__auto_init)
+                  00000f60    000000e0                 : exit.obj (.text:_exit)
+                  00001040    000000c0                 : cpy_tbl.obj (.text:_copy_in)
+                  00001100    000000a0                 : fixfi.obj (.text:__fixfi)
+                  000011a0    00000080                 : cpp_init.obj (.text:___TI_cpp_init)
+                  00001220    00000080                 : boot.obj (.text:_c_int00)
+                  000012a0    00000060                 : fltif.obj (.text:__fltif)
+                  00001300    00000040                 : args_main.obj (.text:__args_main)
+                  00001340    00000040     main.obj (.text)
+                  00001380    00000020     StartUp.obj (.text)
+                  000013a0    00000020     rts6700.lib : addf.obj (.text:__addf)
+                  000013c0    00000020                 : mpyf.obj (.text:__mpyf)
+                  000013e0    00000020                 : negf.obj (.text:__negf)
+                  00001400    00000020                 : exit.obj (.text:_abort)
+
+.cinit     0    00001420    00000444     
+                  00001420    00000304     FIRmono_ISRs_LATC.obj (.cinit)
+                  00001724    00000004     --HOLE-- [fill = 0]
+                  00001728    00000104     coeff.obj (.cinit)
+                  0000182c    00000004     --HOLE-- [fill = 0]
+                  00001830    0000002c     rts6700.lib : exit.obj (.cinit)
+                  0000185c    00000004     --HOLE-- [fill = 0]
+                  00001860    00000004     (.pad.cinit) [fill = 0]
+
+.stack     0    00001868    00000400     UNINITIALIZED
+                  00001868    00000008     rts6700.lib : boot.obj (.stack)
+                  00001870    000003f8     --HOLE--
+
+.far       0    00001c68    000003c4     UNINITIALIZED
+                  00001c68    000002cc     FIRmono_ISRs_LATC.obj (.far)
+                  00001f34    000000ec     coeff.obj (.far)
+                  00002020    0000000c     rts6700.lib : exit.obj (.far)
+
+.bss       0    0000202c    00000018     UNINITIALIZED
+                  0000202c    00000010     FIRmono_ISRs_LATC.obj (.bss)
+                  0000203c    00000004     DSK6713_Support.obj (.bss)
+                  00002040    00000004     coeff.obj (.bss)
+
+.const     0    00002044    00000014     
+                  00002044    00000014     DSK6713_Support.obj (.const:_$P$T0$1)
+
+.switch    0    00002058    00000010     
+                  00002058    00000010     DSK6713_Support.obj (.switch:_Init_McBSP)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+0000202c   $bss
+0000202c   .bss
+00000200   .data
+00000200   .text
+00001400   C$$EXIT
+000008bc   _CheckForOverrun
+00001c68   _CodecDataIn
+00001c6c   _CodecDataOut
+000008e0   _Codec_ISR
+00000824   _DSP_Init
+000007a0   _DSP_Init_EDMA
+00002040   _G
+00000794   _GetSampleFreq
+0000076c   _InitDigitalOutputs
+000006f4   _Init_6713PLL
+000003f8   _Init_AIC23
+00000284   _Init_McBSP
+00001f34   _K
+00000270   _ReadCodecData
+00000254   _ReadSwitches
+00001380   _StartUp
+00000240   _WriteCodecData
+0000021c   _WriteDigitalOutputs
+00000200   _WriteLEDs
+00001c68   __STACK_END
+00000400   __STACK_SIZE
+00000001   __TI_args_main
+000011a0   ___TI_cpp_init
+00002028   ___TI_enable_exit_profile_output
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+0000202c   ___bss__
+ffffffff   ___c_args__
+00001420   ___cinit__
+00000200   ___data__
+00000200   ___edata__
+00002044   ___end__
+00001420   ___etext__
+ffffffff   ___pinit__
+00000200   ___text__
+000013a0   __addf
+00001300   __args_main
+00000e60   __auto_init
+00002020   __cleanup_ptr
+00002024   __dtors_ptr
+00001100   __fixfi
+000012a0   __fltif
+000013c0   __mpyf
+000013e0   __negf
+00001868   __stack
+00001400   _abort
+0000202c   _audioIn
+0000202e   _audioInPrev
+00001220   _c_int00
+00001040   _copy_in
+00000f60   _exit
+00002038   _i
+00001340   _main
+00000c20   _memcpy
+00002030   _wDataBase
+00002034   _wDataPtr
+00001c70   _workingDataA
+00001d5c   _workingDataB
+ffffffff   binit
+00001420   cinit
+00000200   edata
+00002044   end
+00001420   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000200   .data
+00000200   .text
+00000200   _WriteLEDs
+00000200   ___data__
+00000200   ___edata__
+00000200   ___text__
+00000200   edata
+0000021c   _WriteDigitalOutputs
+00000240   _WriteCodecData
+00000254   _ReadSwitches
+00000270   _ReadCodecData
+00000284   _Init_McBSP
+000003f8   _Init_AIC23
+00000400   __STACK_SIZE
+000006f4   _Init_6713PLL
+0000076c   _InitDigitalOutputs
+00000794   _GetSampleFreq
+000007a0   _DSP_Init_EDMA
+00000824   _DSP_Init
+000008bc   _CheckForOverrun
+000008e0   _Codec_ISR
+00000c20   _memcpy
+00000e60   __auto_init
+00000f60   _exit
+00001040   _copy_in
+00001100   __fixfi
+000011a0   ___TI_cpp_init
+00001220   _c_int00
+000012a0   __fltif
+00001300   __args_main
+00001340   _main
+00001380   _StartUp
+000013a0   __addf
+000013c0   __mpyf
+000013e0   __negf
+00001400   C$$EXIT
+00001400   _abort
+00001420   ___cinit__
+00001420   ___etext__
+00001420   cinit
+00001420   etext
+00001868   __stack
+00001c68   _CodecDataIn
+00001c68   __STACK_END
+00001c6c   _CodecDataOut
+00001c70   _workingDataA
+00001d5c   _workingDataB
+00001f34   _K
+00002020   __cleanup_ptr
+00002024   __dtors_ptr
+00002028   ___TI_enable_exit_profile_output
+0000202c   $bss
+0000202c   .bss
+0000202c   ___bss__
+0000202c   _audioIn
+0000202e   _audioInPrev
+00002030   _wDataBase
+00002034   _wDataPtr
+00002038   _i
+00002040   _G
+00002044   ___end__
+00002044   end
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[71 symbols]

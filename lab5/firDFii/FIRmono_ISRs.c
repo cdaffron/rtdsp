@@ -27,9 +27,8 @@ volatile union {
 
 /* add any global variables here */
 float workingData[3] = {0.0f, 0.0f, 0.0f};
-float section[nSections,3] = { {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, },
-                               {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, },
-                               {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, } };
+float section[nSections][3] = { {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 },  {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, {0.0, 0.0, 0.0 }, };
+
 int wDataBase = 0;
 int wDataPtr = 0;
 int sDataBase = 0;
@@ -53,7 +52,7 @@ interrupt void Codec_ISR()
 ///////////////////////////////////////////////////////////////////////
 {                    
 	/* add any local variables here */
-	float output, *p;  
+//	float output, *p;
 
  	if(CheckForOverrun())					// overrun error occurred (i.e. halted DSP)
 		return;								// so serial port is reset to recover
@@ -94,17 +93,8 @@ interrupt void Codec_ISR()
         section[i][sDataPtr] += SOS[i][2] * section[i - 1][sTemp];
     }
 
-	// output = 0;								// set up for LEFT channel
-	// p = pLeft;								// save current sample pointer
-	// if(++pLeft > &xLeft[N])					// update pointer, wrap if necessary
-		// pLeft = xLeft;						// and store
-	// for (i = 0; i <= N; i++) {				// do LEFT channel FIR
-	        // output += *p-- * B[i];  		// multiply and accumulate
-	        // if(p < &xLeft[0])       		// check for pointer wrap around
-        	    // p = &xLeft[N];
-	// }
 
-	CodecDataOut.Channel[LEFT]  = section[nSections - 1][sDataPtr] * G; // store filtered value		
+	CodecDataOut.Channel[LEFT]  = section[nSections - 1][sDataPtr] * G; // store filtered value
 
     sDataBase++;
     if( sDataBase > 2 )

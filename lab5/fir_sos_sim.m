@@ -1,5 +1,5 @@
 sampling_freq = 48000;
-signal_freq = 16000;
+signal_freq = 12000;
 N = 3;
 
 section = zeros(length(SOS),3);
@@ -13,7 +13,7 @@ audio_out = zeros(size(audio_in));
 working_data = zeros(N,1);
 
 for j=1:length(audio_in)
-    working_data(1)=audio_in(j);
+    working_data(1)=audio_in(j) * G;
     
     section(1,1) = SOS(1,1)*working_data(1) + SOS(1,2)*working_data(2) + SOS(1,3)*working_data(3);
     
@@ -21,7 +21,7 @@ for j=1:length(audio_in)
         section(i,1) = SOS(i,1)*section(i-1,1) + SOS(i,2)*section(i-1,2) + SOS(i,3)*section(i-1,3);
     end
     
-    audio_out(j) = section(nSections,1) * G;
+    audio_out(j) = section(nSections,1);
     
     for i=N:-1:2
         working_data(i) = working_data(i-1);
