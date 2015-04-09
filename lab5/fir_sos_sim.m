@@ -1,5 +1,6 @@
+
 sampling_freq = 48000;
-signal_freq = 12000;
+signal_freq = 6000;
 N = 3;
 
 section = zeros(length(SOS),3);

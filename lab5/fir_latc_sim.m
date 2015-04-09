@@ -1,5 +1,5 @@
 sampling_freq = 48000;
-signal_freq = 16000;
+signal_freq = 12000;
 N = 59;
 
 time = (0:1/sampling_freq:0.05)';

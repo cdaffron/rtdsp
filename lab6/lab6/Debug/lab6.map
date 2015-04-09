@@ -1,0 +1,211 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.4.12                     
+******************************************************************************
+>> Linked Thu Apr 09 12:53:05 2015
+
+OUTPUT FILE NAME:   <lab6.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00001480
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  vecs                  00000000   00000200  00000200  00000000  RWIX
+  IRAM                  00000200   0003fe00  0000189c  0003e564  RWIX
+  SDRAM                 80000000   01000000  00232800  00dcd800  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+vectors    0    00000000    00000200     
+                  00000000    00000200     vectors.obj (vectors)
+
+.data      0    00000200    00000000     UNINITIALIZED
+
+.text      0    00000200    000013c0     
+                  00000200    00000900     DSK6713_Support.obj (.text)
+                  00000b00    00000320     ISRs.obj (.text:retain)
+                  00000e20    00000240     rts6700.lib : memcpy62.obj (.text:_memcpy)
+                  00001060    00000100     ISRs.obj (.text)
+                  00001160    00000100     rts6700.lib : autoinit.obj (.text:__auto_init)
+                  00001260    000000e0                 : exit.obj (.text:_exit)
+                  00001340    000000c0                 : cpy_tbl.obj (.text:_copy_in)
+                  00001400    00000080                 : cpp_init.obj (.text:___TI_cpp_init)
+                  00001480    00000080                 : boot.obj (.text:_c_int00)
+                  00001500    00000060     main.obj (.text)
+                  00001560    00000040     rts6700.lib : args_main.obj (.text:__args_main)
+                  000015a0    00000020                 : exit.obj (.text:_abort)
+
+.stack     0    000015c0    00000400     UNINITIALIZED
+                  000015c0    00000008     rts6700.lib : boot.obj (.stack)
+                  000015c8    000003f8     --HOLE--
+
+.cinit     0    000019c0    00000094     
+                  000019c0    0000005c     ISRs.obj (.cinit)
+                  00001a1c    00000004     --HOLE-- [fill = 0]
+                  00001a20    0000002c     rts6700.lib : exit.obj (.cinit)
+                  00001a4c    00000004     --HOLE-- [fill = 0]
+                  00001a50    00000004     (.pad.cinit) [fill = 0]
+
+.const     0    00001a54    00000014     
+                  00001a54    00000014     DSK6713_Support.obj (.const:_$P$T0$1)
+
+.far       0    00001a68    00000014     UNINITIALIZED
+                  00001a68    0000000c     rts6700.lib : exit.obj (.far)
+                  00001a74    00000008     ISRs.obj (.far)
+
+.bss       0    00001a7c    00000010     UNINITIALIZED
+                  00001a7c    0000000c     ISRs.obj (.bss)
+                  00001a88    00000004     DSK6713_Support.obj (.bss)
+
+.switch    0    00001a8c    00000010     
+                  00001a8c    00000010     DSK6713_Support.obj (.switch:_Init_McBSP)
+
+CE0        0    80000000    00232800     UNINITIALIZED
+                  80000000    00232800     ISRs.obj (CE0)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00001a7c   $bss
+00001a7c   .bss
+00000200   .data
+00000200   .text
+000015a0   C$$EXIT
+00000264   _CheckForOverrun
+00001a74   _CodecDataIn
+00001a78   _CodecDataOut
+00000b00   _Codec_ISR
+0000060c   _DSP_Init
+000006a4   _DSP_Init_EDMA
+00000200   _GetSampleFreq
+000002c8   _InitDigitalOutputs
+000009f4   _Init_6713PLL
+0000031c   _Init_AIC23
+00000728   _Init_McBSP
+0000113c   _IsBufferReady
+0000114c   _IsOverRun
+000010cc   _ProcessBuffer
+00000210   _ReadCodecData
+000002ac   _ReadSwitches
+00000238   _WriteCodecData
+000002f0   _WriteDigitalOutputs
+00000270   _WriteLEDs
+00001060   _ZeroBuffers
+000019c0   __STACK_END
+00000400   __STACK_SIZE
+00000001   __TI_args_main
+00001400   ___TI_cpp_init
+00001a70   ___TI_enable_exit_profile_output
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+00001a7c   ___bss__
+ffffffff   ___c_args__
+000019c0   ___cinit__
+00000200   ___data__
+00000200   ___edata__
+00001a8c   ___end__
+000015c0   ___etext__
+ffffffff   ___pinit__
+00000200   ___text__
+00001560   __args_main
+00001160   __auto_init
+00001a68   __cleanup_ptr
+00001a6c   __dtors_ptr
+000015c0   __stack
+000015a0   _abort
+80000000   _buffer
+00001a7c   _buffer_ready
+00001480   _c_int00
+00001340   _copy_in
+00001260   _exit
+00001500   _main
+00000e20   _memcpy
+00001a7d   _over_run
+00001a7e   _ready_index
+ffffffff   binit
+000019c0   cinit
+00000200   edata
+00001a8c   end
+000015c0   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000200   .data
+00000200   .text
+00000200   _GetSampleFreq
+00000200   ___data__
+00000200   ___edata__
+00000200   ___text__
+00000200   edata
+00000210   _ReadCodecData
+00000238   _WriteCodecData
+00000264   _CheckForOverrun
+00000270   _WriteLEDs
+000002ac   _ReadSwitches
+000002c8   _InitDigitalOutputs
+000002f0   _WriteDigitalOutputs
+0000031c   _Init_AIC23
+00000400   __STACK_SIZE
+0000060c   _DSP_Init
+000006a4   _DSP_Init_EDMA
+00000728   _Init_McBSP
+000009f4   _Init_6713PLL
+00000b00   _Codec_ISR
+00000e20   _memcpy
+00001060   _ZeroBuffers
+000010cc   _ProcessBuffer
+0000113c   _IsBufferReady
+0000114c   _IsOverRun
+00001160   __auto_init
+00001260   _exit
+00001340   _copy_in
+00001400   ___TI_cpp_init
+00001480   _c_int00
+00001500   _main
+00001560   __args_main
+000015a0   C$$EXIT
+000015a0   _abort
+000015c0   ___etext__
+000015c0   __stack
+000015c0   etext
+000019c0   __STACK_END
+000019c0   ___cinit__
+000019c0   cinit
+00001a68   __cleanup_ptr
+00001a6c   __dtors_ptr
+00001a70   ___TI_enable_exit_profile_output
+00001a74   _CodecDataIn
+00001a78   _CodecDataOut
+00001a7c   $bss
+00001a7c   .bss
+00001a7c   ___bss__
+00001a7c   _buffer_ready
+00001a7d   _over_run
+00001a7e   _ready_index
+00001a8c   ___end__
+00001a8c   end
+80000000   _buffer
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[64 symbols]

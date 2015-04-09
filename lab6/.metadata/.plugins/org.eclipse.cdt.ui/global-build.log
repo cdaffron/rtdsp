@@ -1,0 +1,43 @@
+
+**** Clean-only build of configuration Debug for project lab6 ****
+
+"c:\\ti\\ccsv6\\utils\\bin\\gmake" -k clean 
+gmake: *** No rule to make target `clean'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab6 ****
+
+"c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../DSK6713_Support.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6700 --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="DSK6713_Support.pp"  "../DSK6713_Support.c"
+'Finished building: ../DSK6713_Support.c'
+' '
+'Building file: ../ISRs.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6700 --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
+"../ISRs.c", line 81: warning #179-D: variable "i" was declared but never referenced
+"../ISRs.c", line 82: warning #179-D: variable "pL" was declared but never referenced
+"../ISRs.c", line 83: warning #179-D: variable "pR" was declared but never referenced
+"../ISRs.c", line 84: warning #179-D: variable "temp" was declared but never referenced
+'Finished building: ../ISRs.c'
+' '
+'Building file: ../main.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6700 --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+'Finished building: ../main.c'
+' '
+'Building file: ../vectors.asm'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6700 --abi=coffabi -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.pp"  "../vectors.asm"
+'Finished building: ../vectors.asm'
+' '
+'Building target: lab6.out'
+'Invoking: C6000 Linker'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6700 --abi=coffabi -g --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab6.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab6_linkInfo.xml" --rom_model -o "lab6.out"  "./DSK6713_Support.obj" "./ISRs.obj" "./main.obj" "./vectors.obj" "../lnk6713.cmd" -l"libc.a" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" 
+<Linking>
+'Finished building target: lab6.out'
+' '
+
+**** Build Finished ****
