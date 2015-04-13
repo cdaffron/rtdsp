@@ -6,11 +6,11 @@
 		<item value="c:\ti\ccsv6\ccs_base\common\targetdb\boards\dsk6713.xml" key="CCS.TARGET"/>
 		<item value="c:\ti\ccsv6\ccs_base\common\targetdb\connections\SDDSKUSB_Connection.xml" key="CCS.CONNECTION"/>
 		<section name="1">
-			<item value="" key="CCS.DEVICE_ENDIANNESS"/>
 			<item value="" key="CCS.CODEGEN_TOOL_VERSION"/>
+			<item value="" key="CCS.DEVICE_ENDIANNESS"/>
 			<item value="C:\Users\cdaffron\Downloads\K13903_Disk\K13903_Disk\FILES\code\common_code\6713\lnk6713.cmd" key="CCS.LINKER_COMMAND_FILE"/>
-			<item value="null" key="CCS.RUNTIME_SUPPORT_LIB"/>
 			<item value="executable" key="CCS.OUTPUT_TYPE"/>
+			<item value="null" key="CCS.RUNTIME_SUPPORT_LIB"/>
 			<item value="" key="CCS.OUTPUT_FORMAT"/>
 		</section>
 	</section>
