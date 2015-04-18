@@ -104,14 +104,14 @@ void ProcessBuffer()
    }              */
  
   
-/* addition and subtraction 
+// addition and subtraction
    for(i=0;i < BUFFER_LENGTH;i++){ 
       temp = *pL;        
       *pL = temp + *pR; // left = L+R
       *pR = temp - *pR; // right = L-R 
       pL++;
       pR++;
-    }   */
+    }
              
                    
 /* add a sinusoid    
