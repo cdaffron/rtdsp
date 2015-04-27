@@ -2,7 +2,17 @@
 **** Build of configuration Debug for project fft_edma ****
 
 "c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-gmake: Nothing to be done for `all'.
+'Building file: ../ISRs.c'
+'Invoking: C6000 Compiler'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6713 --abi=coffabi -O2 -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
+'Finished building: ../ISRs.c'
+' '
+'Building target: fft_edma.out'
+'Invoking: C6000 Linker'
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" -mv6713 --abi=coffabi -O2 -g --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off -z -m"fft_edma.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="fft_edma_linkInfo.xml" --rom_model -o "fft_edma.out"  "./DSK6713_Support.obj" "./ISRs.obj" "./coeff.obj" "./fft.obj" "./main.obj" "./vectors_EDMA.obj" "../lnk6713.cmd" -l"libc.a" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" 
+<Linking>
+'Finished building target: fft_edma.out'
+' '
 
 **** Build Finished ****
 

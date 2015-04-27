@@ -4,39 +4,39 @@
 "c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
 'Building file: ../DSK6713_Support.c'
 'Invoking: C6000 Compiler'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -Ooff -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="DSK6713_Support.pp"  "../DSK6713_Support.c"
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -O2 -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="DSK6713_Support.pp"  "../DSK6713_Support.c"
 'Finished building: ../DSK6713_Support.c'
 ' '
 'Building file: ../IIRmono_ISRs_DFii.c'
 'Invoking: C6000 Compiler'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -Ooff -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="IIRmono_ISRs_DFii.pp"  "../IIRmono_ISRs_DFii.c"
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -O2 -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="IIRmono_ISRs_DFii.pp"  "../IIRmono_ISRs_DFii.c"
 "../IIRmono_ISRs_DFii.c", line 53: warning #179-D: variable "sTemp" was declared but never referenced
 "../IIRmono_ISRs_DFii.c", line 56: warning #179-D: variable "out" was declared but never referenced
 'Finished building: ../IIRmono_ISRs_DFii.c'
 ' '
 'Building file: ../StartUp.c'
 'Invoking: C6000 Compiler'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -Ooff -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.pp"  "../StartUp.c"
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -O2 -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.pp"  "../StartUp.c"
 'Finished building: ../StartUp.c'
 ' '
 'Building file: ../coeff.c'
 'Invoking: C6000 Compiler'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -Ooff -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="coeff.pp"  "../coeff.c"
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -O2 -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="coeff.pp"  "../coeff.c"
 'Finished building: ../coeff.c'
 ' '
 'Building file: ../main.c'
 'Invoking: C6000 Compiler'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -Ooff -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -O2 -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
 'Finished building: ../main.c'
 ' '
 'Building file: ../vectors.asm'
 'Invoking: C6000 Compiler'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -Ooff -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.pp"  "../vectors.asm"
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -O2 -g --include_path="c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --include_path="C:/ti/C6xCSL/include" --include_path="C:/ti/CCStudio/c6000/dsk6713/include" --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.pp"  "../vectors.asm"
 'Finished building: ../vectors.asm'
 ' '
 'Building target: iirDFii.out'
 'Invoking: C6000 Linker'
-"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -Ooff -g --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off -z -m"iirDFii.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="iirDFii_linkInfo.xml" --rom_model -o "iirDFii.out"  "./DSK6713_Support.obj" "./IIRmono_ISRs_DFii.obj" "./StartUp.obj" "./coeff.obj" "./main.obj" "./vectors.obj" "../lnk6713.cmd" -l"libc.a" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" 
+"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/bin/cl6x" --abi=coffabi -O2 -g --define=CHIP_6713 --display_error_number --diag_warning=225 --diag_wrap=off -z -m"iirDFii.map" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/lib" -i"c:/ti/ccsv6/tools/compiler/c6000_7.4.12/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="iirDFii_linkInfo.xml" --rom_model -o "iirDFii.out"  "./DSK6713_Support.obj" "./IIRmono_ISRs_DFii.obj" "./StartUp.obj" "./coeff.obj" "./main.obj" "./vectors.obj" "../lnk6713.cmd" -l"libc.a" -l"C:\ti\C6xCSL\lib_3x\csl6713.lib" 
 <Linking>
 'Finished building target: iirDFii.out'
 ' '

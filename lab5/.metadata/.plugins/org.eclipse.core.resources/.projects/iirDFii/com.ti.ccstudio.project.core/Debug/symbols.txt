@@ -1,6 +1,6 @@
 #define __signed_chars__ 1	/* Predefined */
 #define __DATE__ "Apr 27 2015"	/* Predefined */
-#define __TIME__ "14:05:51"	/* Predefined */
+#define __TIME__ "14:57:10"	/* Predefined */
 #define __STDC__ 1	/* Predefined */
 #define __STDC_VERSION__ 199409L	/* Predefined */
 #define __TI_INT40_T__ 1	/* Predefined */
@@ -22,4 +22,5 @@
 #define __TI_WCHAR_T_BITS__ 16	/* Predefined */
 #define __TI_GNU_ATTRIBUTE_SUPPORT__ 1	/* Predefined */
 #define __TI_STRICT_FP_MODE__ 1	/* Predefined */
+#define _INLINE 1
 #define CHIP_6713 1
