@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;iirDFii/IIRmono_ISRs_SOS.c&apos; to &apos;IIRmono_ISRs_DFii.c&apos;" description="Rename resource &apos;IIRmono_ISRs_SOS.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="IIRmono_ISRs_SOS.c" name="IIRmono_ISRs_DFii.c" stamp="1430141240153" updateReferences="true"/>
+</session>

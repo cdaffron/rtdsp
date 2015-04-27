@@ -1,4 +1,17 @@
 
+**** Clean-only build of configuration Debug for project lab6_step2 ****
+
+"c:\\ti\\ccsv6\\utils\\bin\\gmake" -k clean 
+DEL /F  "lab6_step2.out"  "lab6_step2.hex" 
+DEL /F "DSK6713_Support.pp" "ISRs.pp" "coeff.pp" "main.pp" 
+DEL /F "DSK6713_Support.obj" "ISRs.obj" "coeff.obj" "main.obj" "vectors_EDMA.obj" 
+DEL /F "vectors_EDMA.pp" 
+Could Not Find C:\Users\cdaffron\git\rtdsp\lab6\lab6_step2\Debug\vectors_EDMA.pp
+'Finished clean'
+' '
+
+**** Build Finished ****
+
 **** Build of configuration Debug for project lab6_step2 ****
 
 "c:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 

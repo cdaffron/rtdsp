@@ -1,0 +1,65 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../lnk6713.cmd 
+
+ASM_SRCS += \
+../vectors_EDMA.asm 
+
+C_SRCS += \
+../DSK6713_Support.c \
+../ISRs.c \
+../coeff.c \
+../fft.c \
+../main.c 
+
+OBJS += \
+./DSK6713_Support.obj \
+./ISRs.obj \
+./coeff.obj \
+./fft.obj \
+./main.obj \
+./vectors_EDMA.obj 
+
+ASM_DEPS += \
+./vectors_EDMA.pp 
+
+C_DEPS += \
+./DSK6713_Support.pp \
+./ISRs.pp \
+./coeff.pp \
+./fft.pp \
+./main.pp 
+
+C_DEPS__QUOTED += \
+"DSK6713_Support.pp" \
+"ISRs.pp" \
+"coeff.pp" \
+"fft.pp" \
+"main.pp" 
+
+OBJS__QUOTED += \
+"DSK6713_Support.obj" \
+"ISRs.obj" \
+"coeff.obj" \
+"fft.obj" \
+"main.obj" \
+"vectors_EDMA.obj" 
+
+ASM_DEPS__QUOTED += \
+"vectors_EDMA.pp" 
+
+C_SRCS__QUOTED += \
+"../DSK6713_Support.c" \
+"../ISRs.c" \
+"../coeff.c" \
+"../fft.c" \
+"../main.c" 
+
+ASM_SRCS__QUOTED += \
+"../vectors_EDMA.asm" 
+
+
